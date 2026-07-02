@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/splash.css" />
+    <title>Document</title>
+  </head>
+  <body class="m-0 p-0">
+    <main id="splash-main" class="h-screen overflow-hidden relative">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="splash-video w-full h-full object-cover absolute inset-0"
+      >
+        <source
+          src="assets/video/Male bodybuilder picks up free weights inside indoor gym, Sports Stock Footage ft. exercise & health.mp4"
+          class="splash-video-source"
+          type="video/mp4"
+        />
+      </video>
+      <div
+        class="splash-text-box relative flex w-full h-full items-center justify-center flex-col text-white text-[25px]"
+      >
+        <h1 class="splash-h1">جیمینو</h1>
+        <h4 class="splash-h4">با جیمینو اگاهانه ورزش کن</h4>
+      </div>
+      <div
+        class="splash-loading absolute w-full h-full flex justify-end pb-[50px] items-center inset-0 flex-col gap-5"
+      >
+        <svg class="w-7 h-7 animate-spin text-white" viewBox="0 0 50 50">
+          <circle
+            cx="25"
+            cy="25"
+            r="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-dasharray="90"
+            stroke-dashoffset="60"
+          />
+        </svg>
+        <h3 class="text-sm text-white">درحال اماده سازی مسیر ورزشی شما</h3>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
