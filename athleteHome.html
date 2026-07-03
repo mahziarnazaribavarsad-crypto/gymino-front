@@ -1,127 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
-    <link rel="stylesheet" href="assets/css/athleteHome.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+    />
+    <link rel="stylesheet" href="assets/css/athleteHome.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body class="bg-black">
     <header id="header" class="w-full">
-        <div class="header-container w-full">
+      <div class="header-container w-full">
+        <section
+          class="header-info-container flex justify-between items-center gap-4 px-6 py-3 bg-[#1C1C1E]"
+        >
+          <div class="header-user-img size-[2.8rem] order-1">
+            <img
+              src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
+              class="user-img w-full h-full rounded-full"
+              alt=""
+            />
+          </div>
 
+          <div class="header-welcome-container flex justify-between grow py-2">
+            <div class="welcome-col-1 order-1 text-right">
+              <div
+                class="text-welcome-top text-[1.3rem] text-white mb-[.2rem] font-bold"
+              >
+                سلام علی عزیز
+              </div>
+              <div
+                class="text-welcome-bottom text-[.7rem] text-[#8E8E93] font-bold"
+              >
+                امروز برای هدفت یه قدم بردار
+              </div>
+            </div>
 
+            <div
+              class="welcome-col-2 flex justify-between items-center gap-6 text-[#8E8E93]"
+            >
+              <div class="welcome-icon-col-1 order-1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
 
-            <section class="header-info-container flex justify-between items-center gap-4 px-6 py-3 bg-[#1C1C1E]">
+              <div class="welcome-icon-col-2">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <div class="header-user-img size-[2.8rem] order-1 ">
-                    <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="user-img w-full h-full rounded-full" alt="">
-                </div>
+        <section class="header-banner px-6 pt-4 pb-2 bg-black">
+          <div class="header-banner-container relative h-64">
+            <img
+              src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg"
+              class="w-full rounded-3xl absolute inset-0"
+              alt="banner"
+            />
+            <div
+              class="banner-shadow absolute inset-0 rounded-3xl bg-gradient-to-t from-black/90 via-black/60 via-black/30 to-transparent"
+            ></div>
+            <div
+              class="banner-text-container text-right absolute right-6 bottom-10"
+            >
+              <h5 class="text-white font-bold text-[.6rem]">پیشنهاد ویژه</h5>
+              <h3
+                class="text-white font-bold text-[1.5rem] mt-[.1rem] mb-[.4rem]"
+              >
+                چالش 30 روزه چربی سوزی
+              </h3>
+              <h5 class="text-[#F5F5F7] font-bold text-[.6rem]">
+                همین حالا با مربی مریم شروع کن
+              </h5>
+            </div>
+          </div>
+        </section>
 
-                <div class="header-welcome-container flex justify-between grow py-2">
+        <section class="header-report bg-black w-full">
+          <div
+            class="header-report-container w-full px-6 grid grid-cols-2 gap-6"
+          >
+            <div
+              class="report-box flex flex-col items-end justify-center bg-[#1C1C1E] rounded-2xl py-3 pr-4"
+            >
+              <div class="report-Square size-[18px] bg-green-700"></div>
+              <h3
+                class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]"
+              >
+                زمان تمرین
+              </h3>
+              <h1 class="report-text-bottom text-white text-[1.2rem]">
+                56 دقیقه
+              </h1>
+            </div>
 
-                    <div class="welcome-col-1 order-1 text-right">
-                        <div class="text-welcome-top text-[1.3rem] text-white mb-[.2rem] font-bold">سلام علی عزیز</div>
-                        <div class="text-welcome-bottom text-[.7rem] text-[#8E8E93] font-bold">امروز برای هدفت یه قدم بردار</div>
-                    </div>
+            <div
+              class="report-box flex flex-col items-end justify-center bg-[#1C1C1E] rounded-2xl py-4 pr-4"
+            >
+              <div class="report-Square size-[18px] bg-red-500"></div>
+              <h3
+                class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]"
+              >
+                کالری
+              </h3>
+              <h1 class="report-text-bottom text-white text-[1.2rem]">840</h1>
+            </div>
 
-                    <div class="welcome-col-2 flex justify-between items-center gap-6 text-[#8E8E93]">
+            <div
+              class="report-box flex flex-col items-end justify-center bg-[#1C1C1E] rounded-2xl py-4 pr-4"
+            >
+              <div class="report-Square size-[18px] bg-blue-600"></div>
+              <h3
+                class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]"
+              >
+                مصرف اب
+              </h3>
+              <h1 class="report-text-bottom text-white text-[1.2rem]">
+                1.5 لیتر
+              </h1>
+            </div>
 
-                        <div class="welcome-icon-col-1 order-1">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-
-                        <div class="welcome-icon-col-2 ">
-                            <i class="fa-solid fa-bell"></i>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </section>
-
-            <section class="header-banner px-6 py-4 bg-black">
-
-                <div class="header-banner-container relative h-64">
-                    <img src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg"  class="w-full rounded-3xl absolute inset-0 " alt="banner">
-                    <div class="banner-shadow absolute inset-0 rounded-3xl bg-gradient-to-t from-black/90 via-black/60 via-black/30 to-transparent"></div>
-                    <div class="banner-text-container text-right absolute right-6 bottom-10">
-                        <h5 class="text-white font-bold text-[.6rem] ">پیشنهاد ویژه</h5>
-                        <h3 class=" text-white font-bold text-[1.5rem] mt-[.1rem] mb-[.4rem] ">چالش 30 روزه چربی سوزی</h3>
-                        <h5 class="text-[#F5F5F7] font-bold text-[.6rem]">همین حالا با مربی مریم شروع کن</h5>
-                    </div>
-                </div>
-
-
-
-
-
-            </section>
-
-
-
-            <section class="header-report bg-black w-full">
-                <div class="header-report-container w-full p-6 grid grid-cols-2 gap-6 ">
-
-                    <div class="report-box flex flex-col items-end justify-center bg-[#1C1C1E]  rounded-2xl py-4 pr-4">
-                        <div class="report-Square size-[18px] bg-green-700"></div>
-                        <h3 class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]">زمان تمرین</h3>
-                        <h1 class="report-text-bottom text-white text-[1.2rem]">56 دقیقه</h1>
-                    </div>
-
-                    <div class="report-box flex flex-col items-end justify-center bg-[#1C1C1E]  rounded-2xl py-4 pr-4">
-                        <div class="report-Square size-[18px] bg-red-500"></div>
-                        <h3 class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]">کالری</h3>
-                        <h1 class="report-text-bottom text-white text-[1.2rem]">840</h1>
-                    </div>
-
-                    <div class="report-box flex flex-col items-end justify-center bg-[#1C1C1E]  rounded-2xl py-4 pr-4">
-                        <div class="report-Square size-[18px] bg-blue-600"></div>
-                        <h3 class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]">مصرف اب</h3>
-                        <h1 class="report-text-bottom text-white text-[1.2rem]">1.5 لیتر</h1>
-                    </div>
-
-                    <div class="report-box flex flex-col items-end justify-center bg-[#1C1C1E]  rounded-2xl py-4 pr-4">
-                        <div class="report-Square size-[18px] bg-yellow-500"></div>
-                        <h3 class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]">گام ها</h3>
-                        <h1 class="report-text-bottom text-white text-[1.2rem]">4,200</h1>
-                    </div>
-
-                </div>
-            </section>
-
-
-
-
-
-        </div>
+            <div
+              class="report-box flex flex-col items-end justify-center bg-[#1C1C1E] rounded-2xl py-4 pr-4"
+            >
+              <div class="report-Square size-[18px] bg-yellow-500"></div>
+              <h3
+                class="report-text-top text-[#8E8E93] text-[.8rem] mt-[.2rem] mb-[.1rem]"
+              >
+                گام ها
+              </h3>
+              <h1 class="report-text-bottom text-white text-[1.2rem]">4,200</h1>
+            </div>
+          </div>
+        </section>
+      </div>
     </header>
 
+    <main id="main">
+      <section class="current-plan w-full my-6 px-6">
+        <div
+          class="current-plan-container w-full px-6 bg-white rounded-3xl py-6"
+        >
+          <header class="plan-header flex justify-between items-center">
+            <div class="plan-text-container order-1 text-right">
+              <h1 class="plan-top-text text-[#1C1C1E] text-[.7rem]">
+                برنامه فعلی
+              </h1>
+              <h3 class="plan-bottom-text font-bold text-[1.3rem]">
+                تمرین سینه و بازو
+              </h3>
+            </div>
 
+            <p
+              class="completion-percentage bg-black text-white flex justify-center items-center py-[.4rem] font-bold px-4 rounded-3xl text-[.7rem]"
+            >
+              45% تکمیل شده
+            </p>
+          </header>
 
+          <div class="border w-full my-6"></div>
 
+          <section class="move-container w-full mb-4">
+            <div
+              class="move-box w-full bg-[#1C1C1E] flex justify-between rounded-xl px-5 py-4 gap-3 w-full"
+            >
+              <div class="move-img-box size-[4rem] order-1">
+                <img
+                  src="assets/image/anastase-maragos-9dzWZQWZMdE-unsplash.jpg"
+                  class="w-full h-full rounded-xl"
+                  alt="move-img"
+                />
+              </div>
 
+              <div
+                class="move-text-container flex justify-between items-center grow"
+              >
+                <div
+                  class="text-box order-1 flex justify-center items-end flex-col gap-[.2rem]"
+                >
+                  <div class="text-col-1 text-white">
+                    <h1 class="font-bold">پرس سینه دمبل</h1>
+                  </div>
 
+                  <div class="text-col-2 flex text-[#8E8E93]">
+                    <h3 class="set-text order-2 text-[.7rem]">ست 3</h3>
+                    <div class="col-border order-1 py-[2px] mx-1">
+                      <div class="bg-[#8E8E93] w-[2px] h-full"></div>
+                    </div>
+                    <h3 class="repeat-text text-[.7rem]">12 تکرار</h3>
+                  </div>
+                </div>
 
+                <button
+                  class="move-icon-box bg-white rounded-full flex justify-center items-center size-[1.7rem] text-[.6rem]"
+                >
+                  <i class="fa fa-play"></i>
+                </button>
+              </div>
+            </div>
 
+            <div
+              class="move-box w-full bg-[#1C1C1E] flex justify-between rounded-xl px-5 py-4 gap-3 mt-3 w-full"
+            >
+              <div class="move-img-box size-[4rem] order-1">
+                <img
+                  src="assets/image/anastase-maragos-9dzWZQWZMdE-unsplash.jpg"
+                  class="w-full h-full rounded-xl"
+                  alt="move-img"
+                />
+              </div>
 
+              <div
+                class="move-text-container flex justify-between items-center grow"
+              >
+                <div
+                  class="text-box order-1 flex justify-center items-end flex-col gap-[.2rem]"
+                >
+                  <div class="text-col-1 text-white">
+                    <h1 class="font-bold">جلو بازو سیم کش</h1>
+                  </div>
 
+                  <div class="text-col-2 flex text-[#8E8E93]">
+                    <h3 class="set-text order-2 text-[.7rem]">ست 4</h3>
+                    <div class="col-border order-1 py-[2px] mx-1">
+                      <div class="bg-[#8E8E93] w-[2px] h-full"></div>
+                    </div>
+                    <h3 class="repeat-text text-[.7rem]">10 تکرار</h3>
+                  </div>
+                </div>
 
+                <button
+                  class="move-icon-box bg-white rounded-full flex justify-center items-center size-[1.7rem] text-[.6rem]"
+                >
+                  <i class="fa fa-play"></i>
+                </button>
+              </div>
+            </div>
+          </section>
 
+          <footer
+            class="paln-footer w-full bg-[#F5A623] border border-[#F5A623] flex justify-center items-center"
+          >
+            <button
+              class="plan-button w-full rounded-2xl bg-white py-3 text-[.8rem] font-bold text-[#1C1C1E]"
+            >
+              ادامه تمرین امروز
+            </button>
+          </footer>
+        </div>
+      </section>
+    </main>
 
-
-
-
-    <main id="main"></main>
     <footer id="footer"></footer>
-
-</body>
+  </body>
 </html>
