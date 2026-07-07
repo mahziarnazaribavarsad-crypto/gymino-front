@@ -1,3 +1,4 @@
+// change color footer item after click
 const footerCol = document.querySelectorAll(".footer-col")
 
 footerCol.forEach(item => {
