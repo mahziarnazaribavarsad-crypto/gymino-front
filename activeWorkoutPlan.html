@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        surface: '#1c1c1e',
+                        secondaryText: '#8e8e93',
+                        success: '#6b8f7d',
+                        info: '#0a84ff',
+                        white: 'white',
+                        black: 'black',
+                        warning:'#ffd60a'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"/>
+    <link rel="stylesheet" href="assets/css/activeWorkoutPlan.css">
+    <title>Document</title>
+</head>
+<body class="bg-black">
+
+    <nav id="nav" class="w-full bg-surface px-6 py-5">
+        <div class="nav-container  w-full  flex flex-row-reverse justify-between items-center h-full">
+
+            <div class="next text-white">
+                <a href="#" class="next-link"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="nav-text-container text-white">
+                <h1 class="nav-text">برنامه تمرینی امروز</h1>
+            </div>
+
+            <div class="more-menu text-secondaryText">
+                <a href="#" class="menu-link text-lg"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <header id="header" class="px-6 py-6">
+        <div class="header-container flex justify-between items-center">
+
+            <div class="progress-ring-container size-[70px] bg-green-200 rounded-full">
+            </div>
+
+            <div class="header-text text-right ">
+                <h1 class="top-text text-white text-3xl pb-2 font-semibold">دوشنبه. 24 مهر</h1>
+                <h3 class="bottom-text text-secondaryText text-sm font-bold">هدف : چربی سوزی و عضله سازی</h3>
+            </div>
+
+
+        </div>
+    </header>
+
+    
+
+
+
+
+</body>
+</html>
