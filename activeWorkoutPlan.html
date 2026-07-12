@@ -15,7 +15,9 @@
                         info: '#0a84ff',
                         white: 'white',
                         black: 'black',
-                        warning:'#ffd60a'
+                        warning:'#ffd60a',
+                        accent : '#f5a623',
+                        accentBlack : 'rgb(245 166 35 / 0.1)'
                     }
                 }
             }
@@ -73,12 +75,14 @@
                         <a href="#" class="view-all-link text-white">مشاهده همه</a>
                     </div>
 
+                <!-- steps item not selected start  -->
 
-                    <div class="steps-box flex justify-between bg-surface border border-success  items-center py-5 px-3 rounded-3xl mb-3 ">
+                    <div class="steps-box flex justify-between bg-surface  border border-transparent hover:border-success transition duration-200  items-center py-5 px-3 rounded-3xl mb-3 ">
 
                         <div class="steps-box-col-1 flex justify-between items-center px-5 grow">
-                            <div class="steps-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full">
-                                <i class="fa-solid fa-circle-check"></i>
+
+                            <div class="steps-little-icon bg-success size-[1.5rem] flex justify-center items-center rounded-full">
+                                <i class=" check fa-solid fa-check hidden text-white"></i>
                             </div>
 
                             <div class="steps-text text-right  pb-2">
@@ -86,66 +90,73 @@
                                 <h1 class="middle-text text-[1.1rem] text-white font-bold mb-[.1rem]">گرم کردن پویا</h1>
                                 <h2 class="bottom-text text-[.8rem] text-secondaryText">10دقیقه کشش و نرمش</h2>
                             </div>
+
                         </div>
 
                         <div class="steps-box-col-2 flex justify-center items-center">
-                            <a href="#" class="target-big-icon bg-secondaryText size-[3rem] flex justify-center items-center rounded-[30%] text-[1.5rem]">
-                                <i class="fa-solid fa-chevron-right "></i>
+                            <a href="#"  class="start-item-link transition duration-200  size-[3rem] flex justify-center items-center rounded-[30%] text-[1.5rem] bg-accentBlack hover:bg-accentBlack/30 text-white/10 hover:text-white">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="steps-box flex justify-between bg-surface border border-success  items-center py-5 px-3 rounded-3xl mb-3 ">
+                    <div class="steps-box flex justify-between bg-surface  border border-transparent hover:border-success transition duration-200  items-center py-5 px-3 rounded-3xl mb-3 ">
 
                         <div class="steps-box-col-1 flex justify-between items-center px-5 grow">
-                            <div class="steps-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full">
-                                <i class="fa-solid fa-circle-check"></i>
+
+                            <div class="steps-little-icon bg-success size-[1.5rem] flex justify-center items-center rounded-full">
+                                <i  class=" check fa-solid fa-check hidden text-white"></i>
                             </div>
 
                             <div class="steps-text text-right  pb-2">
-                                <h3 class="top-text text-sm text-secondaryText">بخش اول</h3>
-                                <h1 class="middle-text text-[1.1rem] text-white font-bold mb-[.1rem]">گرم کردن پویا</h1>
-                                <h2 class="bottom-text text-[.8rem] text-secondaryText">10دقیقه کشش و نرمش</h2>
+                                <h3 class="top-text text-sm text-secondaryText">بخش دوم</h3>
+                                <h1 class="middle-text text-[1.1rem] text-white font-bold mb-[.1rem]">تمرینات قدرتی</h1>
+                                <h2 class="bottom-text text-[.8rem] text-secondaryText"> 45 دقیقه تکرار بالا </h2>
                             </div>
+
                         </div>
 
                         <div class="steps-box-col-2 flex justify-center items-center">
-                            <a href="#" class="target-big-icon bg-secondaryText size-[3rem] flex justify-center items-center rounded-[30%] text-[1.5rem]">
+                            <a href="#"  class="start-item-link size-[3rem] flex justify-center items-center transition duration-200 rounded-[30%] text-[1.5rem] bg-accentBlack hover:bg-accentBlack/30 text-white/10 hover:text-white">
                                 <i class="fa-solid fa-chevron-right "></i>
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="steps-box flex justify-between bg-surface border border-success  items-center py-5 px-3 rounded-3xl mb-3 ">
+                    <div class="steps-box flex justify-between bg-surface  border border-transparent hover:border-success transition duration-200  items-center py-5 px-3 rounded-3xl mb-3 ">
 
                         <div class="steps-box-col-1 flex justify-between items-center px-5 grow">
-                            <div class="steps-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full">
-                                <i class="fa-solid fa-circle-check"></i>
+
+                            <div class="steps-little-icon bg-success size-[1.5rem] flex justify-center items-center rounded-full">
+                                <i class=" check fa-solid fa-check hidden text-white "></i>
                             </div>
 
                             <div class="steps-text text-right  pb-2">
-                                <h3 class="top-text text-sm text-secondaryText">بخش اول</h3>
-                                <h1 class="middle-text text-[1.1rem] text-white font-bold mb-[.1rem]">گرم کردن پویا</h1>
+                                <h3 class="top-text text-sm text-secondaryText">بخش سوم</h3>
+                                <h1 class="middle-text text-[1.1rem] text-white font-bold mb-[.1rem]">گرم کردن </h1>
                                 <h2 class="bottom-text text-[.8rem] text-secondaryText">10دقیقه کشش و نرمش</h2>
                             </div>
+
                         </div>
 
                         <div class="steps-box-col-2 flex justify-center items-center">
-                            <a href="#" class="target-big-icon bg-secondaryText size-[3rem] flex justify-center items-center rounded-[30%] text-[1.5rem]">
+                            <a href="#"  class="start-item-link bg-accentBlack size-[3rem] flex justify-center items-center rounded-[30%] transition duration-200 text-[1.5rem] hover:bg-accentBlack/30 text-white/10 hover:text-white">
                                 <i class="fa-solid fa-chevron-right "></i>
                             </a>
                         </div>
 
                     </div>
-x
+
+                <!-- steps item not selected end  -->
+
 
 
                 </div>
             </section>
 
-            <section class="proposal w-full">
+            <section class="proposal w-full my-7">
                 <div class="proposal-container w-full h-full flex flex-row-reverse gap-3 pb-10 px-5">
 
                     <div class="proposal-col-1">
@@ -153,8 +164,8 @@ x
                     </div>
 
                     <div class="proposal-col-2 text-right">
-                        <h1 class="proposal-top-text text-white mb-1">پیشنهاد تغذیه</h1>
-                        <p class="proposal-bottom-text text-white">30 دقیقه قبل از تمرین یک عدد موز یا یک فنجان قهوه تلخ برای افزایش انرژی مصرف کنید</p>
+                        <h1 class="proposal-top-text text-white mb-1 text-md">پیشنهاد تغذیه</h1>
+                        <p class="proposal-bottom-text text-white text-sm">30 دقیقه قبل از تمرین یک عدد موز یا یک فنجان قهوه تلخ برای افزایش انرژی مصرف کنید</p>
                     </div>
 
                 </div>
@@ -171,9 +182,13 @@ x
 
                     <div class="whater-col-2 w-full basis-1/3 flex justify-center items-center gap-5 pt-3 pl-3">
 
-                        <i class="fa-solid fa-circle-plus text-info text-xl cursor-pointer"></i>
-                        <span id="whater-number" class="text-2xl text-info pb-2">6</span>
-                        <i class="fa-solid fa-circle-minus text-secondaryText text-xl cursor-pointer"></i>
+
+                        <button id="plus-btn" class="text-info text-xl"><i  class="fa-solid fa-circle-plus "></i></button>
+
+                        <span id="whater-number" class="text-2xl text-info pb-2">0</span>
+
+                        <button id="minus-btn" class=" text-secondaryText text-xl"><i class="fa-solid fa-circle-minus "></i></button>
+
 
                     </div>
 
@@ -194,11 +209,11 @@ x
 
                 <a href="#" class="footer-btn w-full h-full py-2 font-bold text-[.7rem] flex flex-row-reverse justify-center items-center">
                     <h1>شروع برنامه تمرینی</h1>
-                    <i class="fa fa-car mr-4"></i>
+                    <i class="fa fa-play mr-4 text-[.6rem]"></i>
                 </a>
 
             </div>
     </footer>
-
+<script src="assets/js/activeWorkoutPlan.js"></script>
 </body>
 </html>

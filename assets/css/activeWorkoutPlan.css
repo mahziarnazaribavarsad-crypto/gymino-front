@@ -1,0 +1,7 @@
+body{
+    font-family: Vazir, sans-serif;
+}
+
+.active{
+    border-color: #6b8f7d !important;
+}
