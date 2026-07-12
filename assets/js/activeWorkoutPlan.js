@@ -35,20 +35,18 @@
     plusBtn.addEventListener('click' , () =>{
 
         currentNumber =  parseInt(whaterNumber.textContent = ++currentNumber)
-        console.log(currentNumber)
 
     })
 //
-// The process of adding a number
+// The process of removing a number
     minusBtn.addEventListener('click' , () =>{
 
         if(currentNumber > 0) {
 
             currentNumber =  parseInt(whaterNumber.textContent = --currentNumber)
-            console.log(currentNumber)
 
         }
 
     })
-// 
+//
 // whater glass end
