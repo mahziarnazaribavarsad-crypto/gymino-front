@@ -1,16 +1,12 @@
 // active border for program items
 
 const programInputs = [...document.querySelectorAll('.program-input')]
-        // item.classList.remove('border-info')
-        // item.classList.add('border-info')
-
 
 programInputs.forEach(item => {
     item.addEventListener('click' , () => {
-        changeBorderColor()
+        programInputs.forEach(item => {
+            item.classList.remove('border-secondaryText')
+        })
+         item.classList.add('border-secondaryText')
     })
 })
-
-function changeBorderColor() {
-    
-}
