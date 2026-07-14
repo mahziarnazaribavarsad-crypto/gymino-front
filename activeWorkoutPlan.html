@@ -52,8 +52,40 @@
     <header id="header" class="px-6 py-6">
         <div class="header-container flex justify-between items-center">
 
-            <div class="progress-ring-container size-[70px] bg-green-200 rounded-full">
-            </div>
+            <!-- <div class="progress-ring-container  bg-green-200 rounded-full"> -->
+
+<div class="relative w-24 h-24">
+    <svg class="w-full h-full -rotate-90">
+        <!-- دایره پس زمینه -->
+        <circle
+            cx="48"
+            cy="48"
+            r="40"
+            stroke="#333"
+            stroke-width="8"
+            fill="none"
+        />
+
+        <!-- مقدار پیشرفت -->
+        <circle
+            id="progress"
+            cx="48"
+            cy="48"
+            r="40"
+            stroke="#8ab59f"
+            stroke-width="8"
+            fill="none"
+            stroke-linecap="round"
+        />
+    </svg>
+
+    <span class="absolute inset-0 flex items-center justify-center text-green-300 text-sm">
+        65%
+    </span>
+</div>
+
+
+            <!-- </div> -->
 
             <div class="header-text text-right ">
                 <h1 class="top-text text-white text-3xl pb-2 font-semibold">دوشنبه. 24 مهر</h1>
@@ -198,11 +230,8 @@
             </section>
 
 
-
-
         </div>
     </main>
-
 
     <footer id="footer" class="px-6 w-full pb-3">
             <div class="footer-btn-container bg-white flex justify-center items-center rounded-2xl">
@@ -214,6 +243,10 @@
 
             </div>
     </footer>
+
+
+
+
 <script src="assets/js/activeWorkoutPlan.js"></script>
 </body>
 </html>

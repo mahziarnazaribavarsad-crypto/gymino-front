@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=t56, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        surface: '#1c1c1e',
+                        secondaryText: '#8e8e93',
+                        success: '#6b8f7d',
+                        info: '#0a84ff',
+                        white: 'white',
+                        black: 'black',
+                        warning:'#ffd60a',
+                        accent : '#f5a623',
+                        accentBlack : 'rgb(245 166 35 / 0.1)',
+                        error: '#ff453a'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"/>
+    <link rel="stylesheet" href="assets/css/studentManagement.css">
+    <title>Document</title>
+</head>
+<body class="bg-black flex flex-col">
+
+    <header id="header w-full" class=" px-6 py-3 bg-[#1C1C1E]">
+        <div class="header-container w-full flex flex-col items-center justify-center gap-5 ">
+
+
+            <section class="header-top w-full flex justify-between items-center gap-2">
+
+
+
+                <div class="header-top-text flex flex-1 justify-between items-center">
+
+                    <h2 class="header-text order-1 text-2xl text-white/90 font-bold pb-1 ">مدیریت ورزشکاران</h2>
+
+                    <a href="#" class="header-notif-icon bg-black px-2 py-3 rounded-[100%] flex items-center justify-center text-[1.3rem]">
+                        <i class="fa-solid fa-user text-white"></i>
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+            <section class="search w-full flex justify-center items-center  border border-[#F5F5F7]/10 rounded-md px-2 py-[.2rem] gap-2">
+
+                <button class="search-icon text-white text-[.8rem] pt-[.2rem]">
+                    <i class="fa fa-search"></i>
+                </button>
+
+                <div class="search-input flex-1">
+                    <input type="search" placeholder=" جستجوی ورشکار..." class="w-full p-1 outline-none border-none bg-transparent text-white/70 placeholder:text-[#F5F5F7]/30">
+                </div>
+
+
+            </section>
+
+
+            <nav class="filter w-full flex   py-1 gap-2 overflow-auto py-5">
+
+
+                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-4  px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
+                    <a class="filter-text text-nowrap" href="#"> 24همه</a>
+                </button>
+
+                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
+                    <a class="filter-text text-nowrap" href="#">5نیاز به پیگیری</a>
+                </button>
+
+                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
+                    <a class="filter-text text-nowrap" href="#">15فعال</a>
+                </button>
+
+                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
+                    <a class="filter-text text-nowrap" href="#">4 جدید</a>
+                </button>
+
+                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-4  px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
+                    <a class="filter-text text-nowrap" href="#">حرفه ای</a>
+                </button>
+
+                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-4  px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
+                    <a class="filter-text text-nowrap" href="#">حرفه ای</a>
+                </button>
+
+
+            </nav>
+
+
+        </div>
+    </header>
+
+
+    <main id="main" class="px-6 flex-1 pb-[78px]">
+
+        <section class="program-review w-full mt-5">
+            <div class="program-review-container w-full h-full">
+
+                <div class="program-row-1 text-error flex justify-start items-center gap-2 flex-row-reverse mb-4">
+                    <i class="fa-solid fa-warning"></i>
+                    <h1 class="program-row-1-text">نیاز به بررسی برنامه</h1>
+                </div>
+
+
+                <div class="program-row-2 w-full bg-black">
+
+                    <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                                        <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section class="active-athletes w-full mt-5">
+            <div class="program-review-container w-full h-full">
+
+                <div class="program-row-1 text-secondaryText flex justify-start items-center gap-2 flex-row-reverse mb-4">
+                    <h1 class="program-row-1-text">ورزشکاران فعال</h1>
+                </div>
+
+
+                <div class="program-row-2 w-full bg-black">
+
+                    <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                    <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                    <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                    <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                    <div class="target-box flex justify-between bg-surface border border-secondaryText/20  items-center py-5 px-3 rounded-3xl mb-3 ">
+
+              <div class="target-box-col-1 flex justify-between items-center px-5 grow">
+                <div class="target-left-col text-white flex flex-col justify-center items-start rounded-full basis-[50%]">
+
+                    <h1 class="text-sm mb-1">پیشرفت</h1>
+                    <div class="flex w-full text-xs justify-center items-center flex-row-reverse gap-1">
+                        <div class="w-full h-2  rounded-full">
+                            <div class="w-[50%] h-full bg-white rounded-full"></div>
+                        </div>
+                        <h1>50%</h1>
+                    </div>
+
+                </div>
+
+                <div class="target-text text-right  pb-2">
+
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">امیرحسین رضایی</h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]"> مبتدی . کاهش وزن</h2>
+
+                </div>
+
+              </div>
+
+              <div class="target-box-col-2 flex justify-center items-center">
+
+                <div class="target-big-icon size-[3.5rem] flex justify-center items-center rounded-[35%] text-[1.5rem]">
+                  <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full rounded-full" alt="user-img">
+                </div>
+
+              </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer id="footer" class="w-full fixed left-0 bottom-0">
+      <div class="footer-container w-full bg-[#1C1C1E] px-6 py-4">
+        <nav class="footer-nav w-full">
+          <div class="footer-nav-container w-full flex justify-between">
+            <div
+              class="footer-col footer-col-1 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+            >
+              <i class="fa-regular fa-user text-[1.2rem]"></i>
+              <button class="footer-nav-btn text-[.75rem]">پروفایل</button>
+            </div>
+            <div
+              class="footer-col footer-col-2 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+            >
+              <i class="fa-regular fa-message text-[1.2rem]"></i>
+              <button class="footer-nav-btn text-[.75rem]">پیام ها</button>
+            </div>
+            <div
+              class="footer-col footer-col-3 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+            >
+              <i class="fa-regular fa-compass text-[1.2rem]"></i>
+              <button class="footer-nav-btn text-[.75rem]">فعالیت</button>
+            </div>
+            <div
+              class="footer-col footer-col-4 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+            >
+              <i class="fa-solid fa-magnifying-glass text-[1.2rem]"></i>
+              <button class="footer-nav-btn text-[.75rem]">جست و جو</button>
+            </div>
+            <div
+              class="footer-col footer-col-5 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+            >
+              <i class="fa-solid fa-house text-[1.2rem]"></i>
+              <button class="footer-nav-btn text-[.75rem]">خانه</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+
+    <script src="assets/js/studentManagement.js"></script>
+
+</body>
+</html>
