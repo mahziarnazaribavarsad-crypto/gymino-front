@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        surface: '#1c1c1e',
+                        secondaryText: '#8e8e93',
+                        success: '#6b8f7d',
+                        info: '#0a84ff',
+                        white: 'white',
+                        black: 'black',
+                        warning:'#ffd60a',
+                        accent : '#f5a623',
+                        accentBlack : 'rgb(245 166 35 / 0.1)',
+                        error: '#ff453a'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"/>
+    <link rel="stylesheet" href="assets/css/programBuilder.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nav" class="w-full bg-surface px-6 py-5">
+        <div class="nav-container  w-full  flex  justify-between items-center h-full">
+
+            <div class="next text-white">
+                <a href="#" class="next-link"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <div class="nav-text-container text-white">
+                <h1 class="nav-text">طراحی برنامه تمرینی</h1>
+            </div>
+
+            <div class="more-menu text-white">
+                <a href="#" class="menu-link text-lg">دخیره</a>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <header class="header-banner px-6 pt-4 pb-6 bg-black mb-3">
+          <div class="header-banner-container relative h-[180px] flex flex-col justify-center items-center">
+            <img
+              src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg"
+              class="w-full h-full rounded-3xl absolute inset-0"
+              alt="banner"
+            />
+            <div
+              class="banner-shadow absolute inset-0 rounded-3xl bg-gradient-to-t from-black/70 via-black/60 via-black/30 to-transparent"
+            ></div>
+
+            <a href="#" class=" bg-black/40 text-white w-[90%] h-[30px] absolute bottom-5 rounded-3xl flex justify-center items-center">
+                <div class="flex h-full items-center gap-2">
+                    <div class="pb-1"><i class="fa-solid fa-car text-xs"></i></div>
+                    <h1 class="text-xs pb-1 font-bold">تغییر تصویر کاور</h1>
+                </div>
+            </a>
+
+          </div>
+    </header>
+
+    
+</body>
+</html>
