@@ -8,13 +8,16 @@
     <title>Document</title>
   </head>
   <body class="m-0 p-0">
-    <main id="splash-main" class="h-screen overflow-hidden relative">
+    <!-- main -->
+    <main  class="h-screen overflow-hidden relative">
+      <!-- splash screen -->
+       <!-- splash video -->
       <video
         autoplay
         muted
         loop
         playsinline
-        class="splash-video w-full h-full object-cover absolute inset-0"
+        class="w-full h-full object-cover absolute inset-0"
       >
         <source
           src="assets/video/Male bodybuilder picks up free weights inside indoor gym, Sports Stock Footage ft. exercise & health.mp4"
@@ -22,14 +25,16 @@
           type="video/mp4"
         />
       </video>
+      <!-- splash text -->
       <div
-        class="splash-text-box relative flex w-full h-full items-center justify-center flex-col text-white text-[25px]"
+        class="relative flex w-full h-full items-center justify-center flex-col text-white text-[25px]"
       >
         <h1 class="splash-h1">جیمینو</h1>
         <h4 class="splash-h4">با جیمینو اگاهانه ورزش کن</h4>
       </div>
+      <!-- loading icon -->
       <div
-        class="splash-loading absolute w-full h-full flex justify-end pb-[50px] items-center inset-0 flex-col gap-5"
+        class="absolute w-full h-full flex justify-end pb-[50px] items-center inset-0 flex-col gap-5"
       >
         <svg class="w-7 h-7 animate-spin text-white" viewBox="0 0 50 50">
           <circle
@@ -45,6 +50,7 @@
         </svg>
         <h3 class="text-sm text-white">درحال اماده سازی مسیر ورزشی شما</h3>
       </div>
+      
     </main>
     <script src="assets/js/script.js"></script>
   </body>
