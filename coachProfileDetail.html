@@ -11,56 +11,55 @@
 </head>
 <body class="bg-black">
 
-    <header id="header" class="w-full overflow-hidden">
+    <!-- header -->
+    <header class="w-full overflow-hidden">
       <div class="header-container w-full">
 
-
+        <!-- header banner -->
         <section class="header-banner bg-black mb-3">
-          <div class="header-banner-container relative h-[30rem]">
-
+          <div class="relative h-[30rem]">
+            <!-- banner image -->
             <img
               src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg"
               class="w-full h-full absolute inset-0 object-cover"
               alt="banner"
             />
+            <!-- benner shadow -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-black/30 to-transparent"></div>
 
-            <div class="banner-shadow absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-black/30 to-transparent"></div>
-
-
+            <!-- banner icon -->
             <a href="#" class="back-link bg-[#1C1C1E]/80 absolute p-3 rounded-full top-4 left-3 text-white font-bold">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
 
+            <!-- banner text -->
+            <div class="text-right absolute right-6 bottom-10 flex justify-between items-center w-[90%]">
+                <!-- coach info -->
+                <div class="order-1">
 
-            <div class="banner-text-container text-right absolute right-6 bottom-10 flex justify-between items-center w-[90%]">
+                        <h3 class="text-white font-bold text-[1.7rem] mt-[.1rem] mb-[.4rem] text-nowrap">کاپیتان سهراب علوی</h3>
 
-                <div class="coach-info order-1">
-
-                        <h3 class="coach-name text-white font-bold text-[1.7rem] mt-[.1rem] mb-[.4rem] text-nowrap">کاپیتان سهراب علوی</h3>
-
-                        <h5 class="coach-specialty text-[#F5F5F7] font-bold text-[.9rem]">مربی ارشد بدنسازی و فیتنس</h5>
+                        <h5 class="text-[#F5F5F7] font-bold text-[.9rem]">مربی ارشد بدنسازی و فیتنس</h5>
 
                 </div>
-
-                <div class="coach-score  text-[.9rem] bg-[#F5A623] rounded-3xl py-[.4rem] px-5 text-white mt-5"><i class="fa fa-star mr-1"></i>4.9</div>
+                <!-- coach score -->
+                <div class="text-[.9rem] bg-[#F5A623] rounded-3xl py-[.4rem] px-5 text-white mt-5"><i class="fa fa-star mr-1"></i>4.9</div>
 
 
             </div>
 
-
-
           </div>
         </section>
 
-
       </div>
     </header>
-
-    <main id="main" class="pb-[90px]">
+    
+    <!-- main -->
+    <main  class="pb-[90px]">
         <div class="main-container w-full px-6">
 
-
-        <section class="training-section w-full mt-5 mb-4">
+        <!-- training section -->
+        <section class=" w-full mt-5 mb-4">
             <div class="training w-full flex flex-col justify-center  gap-4 ">
 
 
@@ -161,7 +160,8 @@
             </div>
         </section>
 
-        <section class="info w-full h-[5rem]">
+        <!-- info -->
+        <section class="w-full h-[5rem]">
             <div class="info-container w-full h-full flex justify-between items-center bg-[#1C1C1E]/90 text-white px-6 rounded-3xl flex-row-reverse">
 
                 <div class="info-item flex flex-col items-center justify-center">
@@ -186,7 +186,8 @@
             </div>
         </section>
 
-        <section class="tags w-full  my-4">
+        <!-- tags -->
+        <section class=" w-full  my-4">
             <div class="tags-container w-full flex gap-3 overflow-x-auto pt-3 pb-4">
 
 
@@ -216,7 +217,8 @@
             </div>
         </section>
 
-        <section class="coach-bio mb-4">
+        <!-- coach bio -->
+        <section class=" mb-4">
             <div class="coach-bio-contanier text-white  ">
 
 
@@ -234,7 +236,8 @@
             </div>
         </section>
 
-        <section class="athletes-transformation w-full mb-5">
+        <!-- athletes transformation -->
+        <section class=" w-full mb-5">
             <div class="athletes-transformation-container w-full">
 
                 <div class="athletes-transformation-col-1 w-full flex justify-end mb-3 pr-2">
@@ -257,7 +260,8 @@
             </div>
         </section>
 
-        <section class="comments w-full">
+        <!-- comments -->
+        <section class=" w-full">
             <div class="comments-container w-full">
 
                 <div class="comments-col-1 text-white w-full flex flex-row-reverse justify-between mb-3">
@@ -361,19 +365,18 @@
             </div>
         </section>
 
-
         </div>
     </main>
 
-    <footer id="footer" class=" sticky left-0 bottom-0 w-full bg-[#1C1C1E]/80 px-6">
+    <!-- footer -->
+    <footer class="sticky left-0 bottom-0 w-full bg-[#1C1C1E]/80 px-6">
         <div class="footer-container w-full flex flex-row-reverse justify-between items-center gap-3 py-6">
-
-            <a href="#" class="request-program  bg-white flex-1 text-center rounded-xl py-[.4rem] font-medium text-sm text-black/90">رزرو برنامه تمرینی</a>
-
-            <button class="message-btn bg-black size-[2.5rem] rounded-full border border-[#8E8E93]/[28%]"><i class="fa-regular fa-comment text-white text-xl"></i></button>
-
-            <button class="heart-btn bg-black size-[2.5rem] rounded-full border border-[#8E8E93]/[28%]"><i class="fa-regular fa-heart text-red-500 text-xl"></i></button>
-
+            <!-- erquest program link -->
+            <a href="#" class="bg-white flex-1 text-center rounded-xl py-[.4rem] font-medium text-sm text-black/90">رزرو برنامه تمرینی</a>
+            <!-- message btn -->
+            <button class="bg-black size-[2.5rem] rounded-full border border-[#8E8E93]/[28%]"><i class="fa-regular fa-comment text-white text-xl"></i></button>
+            <!-- heart btn  -->
+            <button class="bg-black size-[2.5rem] rounded-full border border-[#8E8E93]/[28%]"><i class="fa-regular fa-heart text-red-500 text-xl"></i></button>
 
         </div>
     </footer>
