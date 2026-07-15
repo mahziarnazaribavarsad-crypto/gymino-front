@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              surface: "#1c1c1e",
+              secondaryText: "#8e8e93",
+              success: "#6b8f7d",
+              info: "#0a84ff",
+              white: "white",
+              black: "black",
+              warning: "#ffd60a",
+              accent: "#f5a623",
+              accentBlack: "rgb(245 166 35 / 0.1)",
+              error: "#ff453a",
+            },
+          },
+        },
+      };
+    </script>
     <link rel="stylesheet" href="assets/css/athleteOnboarding.css" />
     <link
       rel="stylesheet"
@@ -12,195 +32,247 @@
     <title>Document</title>
   </head>
   <body class="p-0 m-0 bg-black min-h-screen">
-    <div class="app flex flex-col min-h-screen ">
-    <header id="header" class="slider-container w-full ">
-        <div class="slider w-full flex justify-between items-center bg-black px-6 py-7 ">
-
-            <div class="slider-slides flex gap-3 grow order-2 justify-center pl-4">
-                <div class="slider-slide bg-[#38383A] size-[.6rem] transition-all duration-200 rounded-full active "></div>
-                <div class="slider-slide bg-[#38383A] size-[.6rem]  transition-all duration-200  rounded-full "></div>
-                <div class="slider-slide bg-[#38383A] size-[.6rem]  transition-all duration-200  rounded-full "></div>
-            </div>
-
-            <button class="prev  font-bold text-white order-1 text-[.8rem]"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="skip  font-bold text-[#38383A] order-3 text-[.8rem]">رد کردن</button>
-
+    <div class="app flex flex-col min-h-screen">
+      <!-- header(slider-container) -->
+      <header class="slider-container w-full">
+        <!-- slider -->
+        <div
+          class="slider w-full flex justify-between items-center bg-black px-6 py-7"
+        >
+          <!-- slider slides -->
+          <div
+            class="slider-slides flex gap-3 grow order-2 justify-center pl-4"
+          >
+            <!-- slide -->
+            <div
+              class="slider-slide bg-[#38383A] size-[.6rem] transition-all duration-200 rounded-full active"
+            ></div>
+            <!-- slide -->
+            <div
+              class="slider-slide bg-[#38383A] size-[.6rem] transition-all duration-200 rounded-full"
+            ></div>
+            <!-- slide -->
+            <div
+              class="slider-slide bg-[#38383A] size-[.6rem] transition-all duration-200 rounded-full"
+            ></div>
+          </div>
+          <!-- move btns -->
+          <button class="prev font-bold text-white order-1 text-[.8rem]">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="skip font-bold text-[#38383A] order-3 text-[.8rem]">
+            رد کردن
+          </button>
         </div>
-    </header>
+      </header>
 
-
-      <main id="main" class="flex-1">
+      <!-- main -->
+      <main class="flex-1">
         <div
           class="main-container bg-black flex flex-col justify-center items-center w-full p-5"
         >
-          <section class="main-text-container text-white text-right mb-6 w-full">
-            <h1 class="main-text-top text-[1.5rem] mb-1">هدف ورزشی تو چیه؟</h1>
-            <h5 class="main-text-bottom text-[.9rem]">
+          <!-- main title text -->
+          <section class="text-white text-right mb-6 w-full">
+            <h1 class="text-[1.5rem] mb-1">هدف ورزشی تو چیه؟</h1>
+            <h5 class="text-[.9rem]">
               برای شخصی سازی بهتر مسیر ورزشی هدفت روانتخاب کن
             </h5>
           </section>
 
-          <section class="main-target-container w-full bg-black">
-
+          <!-- target -->
+          <section class="w-full bg-black">
+            <!-- target item -->
             <div
-              class="target-box flex justify-between bg-[#F5A623]/10 border border-[#F5A623]  items-center py-5 px-3 rounded-3xl mb-3 "
+              class="flex justify-between bg-accent/10 border border-accent items-center py-5 px-3 rounded-3xl mb-3"
             >
-              <div
-                class="target-box-col-1 flex justify-between items-center px-5 grow"
-              >
+              <!-- target item col 1 -->
+              <div class="flex justify-between items-center px-5 grow">
+                <!-- target little icon  -->
                 <div
-                  class="target-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full"
+                  class="bg-accent size-[1.5rem] flex justify-center items-center rounded-full"
                 >
                   <i class="fa fa-car"></i>
                 </div>
-
-                <div class="target-text text-right  pb-2">
-                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">کاهش وزن</h1>
-                  <h2 class="text-[.7rem] text-[#8E8E93]">چربی سوزی و رسیدن به وزن ایده ال</h2>
+                <!-- target text -->
+                <div class="text-right pb-2">
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">
+                    کاهش وزن
+                  </h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]">
+                    چربی سوزی و رسیدن به وزن ایده ال
+                  </h2>
                 </div>
               </div>
-
-              <div class="target-box-col-2 flex justify-center items-center">
+              <!-- target item col 2 -->
+              <div class="flex justify-center items-center">
+                <!-- target big icon -->
                 <div
-                  class="target-big-icon bg-[#F5A623] size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
+                  class="bg-accent size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
                 >
                   <i class="fa fa-car"></i>
                 </div>
               </div>
             </div>
 
+            <!-- target item -->
             <div
-              class="target-box flex justify-between bg-[#F5A623]/10 border border-[#F5A623] items-center py-5 px-3 rounded-3xl mb-3"
+              class="flex justify-between bg-accent/10 border border-accent items-center py-5 px-3 rounded-3xl mb-3"
             >
-              <div
-                class="target-box-col-1 flex justify-between items-center px-5 grow"
-              >
+              <!-- target item col 1 -->
+              <div class="flex justify-between items-center px-5 grow">
+                <!-- target little icon  -->
                 <div
-                  class="target-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full"
+                  class="bg-accent size-[1.5rem] flex justify-center items-center rounded-full"
                 >
                   <i class="fa fa-car"></i>
                 </div>
-
-                <div class="target-text text-right pb-2">
-                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">عضله سازی</h1>
-                  <h2 class="text-[.7rem] text-[#8E8E93]">افزایش حجم و قدرت بدنی</h2>
+                <!-- target text -->
+                <div class="text-right pb-2">
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">
+                    کاهش وزن
+                  </h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]">
+                    چربی سوزی و رسیدن به وزن ایده ال
+                  </h2>
                 </div>
               </div>
-
-              <div class="target-box-col-2 flex justify-center items-center">
+              <!-- target item col 2 -->
+              <div class="flex justify-center items-center">
+                <!-- target big icon -->
                 <div
-                  class="target-big-icon bg-[#F5A623] size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
+                  class="bg-accent size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
                 >
                   <i class="fa fa-car"></i>
                 </div>
               </div>
             </div>
 
+            <!-- target item -->
             <div
-              class="target-box flex justify-between bg-[#F5A623]/10 border border-[#F5A623] items-center py-5 px-3 rounded-3xl mb-3"
+              class="flex justify-between bg-accent/10 border border-accent items-center py-5 px-3 rounded-3xl mb-3"
             >
-              <div
-                class="target-box-col-1 flex justify-between items-center px-5 grow"
-              >
+              <!-- target item col 1 -->
+              <div class="flex justify-between items-center px-5 grow">
+                <!-- target little icon  -->
                 <div
-                  class="target-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full"
+                  class="bg-accent size-[1.5rem] flex justify-center items-center rounded-full"
                 >
                   <i class="fa fa-car"></i>
                 </div>
-
-                <div class="target-text text-right pb-2">
-                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">سلامتی</h1>
-                  <h2 class="text-[.7rem] text-[#8E8E93]">بهبود وضعیت عمومی و طول عمر</h2>
+                <!-- target text -->
+                <div class="text-right pb-2">
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">
+                    کاهش وزن
+                  </h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]">
+                    چربی سوزی و رسیدن به وزن ایده ال
+                  </h2>
                 </div>
               </div>
-
-              <div class="target-box-col-2 flex justify-center items-center">
+              <!-- target item col 2 -->
+              <div class="flex justify-center items-center">
+                <!-- target big icon -->
                 <div
-                  class="target-big-icon bg-[#F5A623] size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
+                  class="bg-accent size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
                 >
                   <i class="fa fa-car"></i>
                 </div>
               </div>
             </div>
 
+            <!-- target item -->
             <div
-              class="target-box flex justify-between bg-[#F5A623]/10 border border-[#F5A623] items-center py-5 px-3 rounded-3xl mb-3"
+              class="flex justify-between bg-accent/10 border border-accent items-center py-5 px-3 rounded-3xl mb-3"
             >
-              <div
-                class="target-box-col-1 flex justify-between items-center px-5 grow"
-              >
+              <!-- target item col 1 -->
+              <div class="flex justify-between items-center px-5 grow">
+                <!-- target little icon  -->
                 <div
-                  class="target-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full"
+                  class="bg-accent size-[1.5rem] flex justify-center items-center rounded-full"
                 >
                   <i class="fa fa-car"></i>
                 </div>
-
-                <div class="target-text text-right pb-2">
-                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">تناسب اندام</h1>
-                  <h2 class="text-[.7rem] text-[#8E8E93]">فرم دهی و سفت شدن بدن</h2>
+                <!-- target text -->
+                <div class="text-right pb-2">
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">
+                    کاهش وزن
+                  </h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]">
+                    چربی سوزی و رسیدن به وزن ایده ال
+                  </h2>
                 </div>
               </div>
-
-              <div class="target-box-col-2 flex justify-center items-center">
+              <!-- target item col 2 -->
+              <div class="flex justify-center items-center">
+                <!-- target big icon -->
                 <div
-                  class="target-big-icon bg-[#F5A623] size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
+                  class="bg-accent size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
                 >
                   <i class="fa fa-car"></i>
                 </div>
               </div>
             </div>
 
+            <!-- target item -->
             <div
-              class="target-box flex justify-between bg-[#F5A623]/10 border border-[#F5A623] items-center py-5 px-3 rounded-3xl"
+              class="flex justify-between bg-accent/10 border border-accent items-center py-5 px-3 rounded-3xl mb-3"
             >
-              <div
-                class="target-box-col-1 flex justify-between items-center px-5 grow"
-              >
+              <!-- target item col 1 -->
+              <div class="flex justify-between items-center px-5 grow">
+                <!-- target little icon  -->
                 <div
-                  class="target-little-icon bg-[#F5A623] target-big-icon size-[1.5rem] flex justify-center items-center rounded-full"
+                  class="bg-accent size-[1.5rem] flex justify-center items-center rounded-full"
                 >
                   <i class="fa fa-car"></i>
                 </div>
-
-                <div class="target-text text-right pb-2">
-                  <h1 class="text-[1.1rem] mb-[1.5px] text-white font-bold mb-[.1rem]">افزایش انرژی</h1>
-                  <h2 class="text-[.7rem] text-[#8E8E93]">رفع خستگی و شادابی روزانه</h2>
+                <!-- target text -->
+                <div class="text-right pb-2">
+                  <h1 class="text-[1.1rem] text-white font-bold mb-[.1rem]">
+                    کاهش وزن
+                  </h1>
+                  <h2 class="text-[.7rem] text-[#8E8E93]">
+                    چربی سوزی و رسیدن به وزن ایده ال
+                  </h2>
                 </div>
               </div>
-
-              <div class="target-box-col-2 flex justify-center items-center">
+              <!-- target item col 2 -->
+              <div class="flex justify-center items-center">
+                <!-- target big icon -->
                 <div
-                  class="target-big-icon bg-[#F5A623] size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
+                  class="bg-accent size-[3rem] flex justify-center items-center rounded-[35%] text-[1.5rem]"
                 >
                   <i class="fa fa-car"></i>
                 </div>
               </div>
-
-
             </div>
-
           </section>
         </div>
       </main>
 
-      <footer id="footer" class="w-full  bg-black">
-        <div class="footer-container px-5 py-7 flex flex-col bg-[#38383A]/40  rounded-t-3xl gap-3 ">
+      <!-- footer -->
+      <footer class="w-full bg-black">
 
+        <div
+          class="footer-container px-5 py-7 flex flex-col bg-[#38383A]/40 rounded-t-3xl gap-3"
+        >
+          <!-- footer button -->
+          <div class="bg-white flex justify-center items-center rounded-2xl">
+            <button
+              class="footer-btn w-full h-full py-2 font-bold text-[.7rem]"
+            >
+              مرحله بعد
+            </button>
+          </div>
+          <!-- footer text -->
+          <div
+            class="flex justify-center items-center gap-2 text-white text-[.6rem]"
+          >
+            <div class="footer-icon"><i class="fa fa-car"></i></div>
+            <div class="footer-text">اطلاعات شما نزد جیمینو محفوظ می ماند</div>
 
-            <div class="footer-btn-container bg-white flex justify-center items-center rounded-2xl">
-                <button class="footer-btn w-full h-full py-2 font-bold text-[.7rem]">مرحله بعد</button>
-            </div>
-
-            <div class="footer-text-container flex  justify-center items-center gap-2 text-white text-[.6rem]">
-
-                <div class="footer-icon"><i class="fa fa-car"></i></div>
-                <div class="footer-text ">اطلاعات شما نزد جیمینو محفوظ می ماند</div>
-
-            </div>
-
-
+          </div>
         </div>
-
+        
       </footer>
 
     </div>
