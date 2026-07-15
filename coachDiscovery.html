@@ -1,511 +1,568 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"/>
-    <link rel="stylesheet" href="assets/css/coachDiscovery.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              surface: "#1c1c1e",
+              secondaryText: "#8e8e93",
+              success: "#6b8f7d",
+              info: "#0a84ff",
+              white: "white",
+              black: "black",
+              warning: "#ffd60a",
+              accent: "#f5a623",
+              accentBlack: "rgb(245 166 35 / 0.1)",
+              error: "#ff453a",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+    />
+    <link rel="stylesheet" href="assets/css/coachDiscovery.css" />
     <title>Document</title>
-</head>
-<body class="bg-black">
-
-    <header id="header w-full" class="px-6 py-3 bg-[#1C1C1E]">
-        <div class="header-container w-full flex flex-col items-center justify-center gap-5 ">
-
-
-            <section class="header-top w-full flex justify-between items-center gap-2">
-
-
-                <div class="header-top-right-icon order-1 bg-white flex  rounded-xl  p-2">
-
-                    <i class="fa-solid fa-question"></i>
-
-                </div>
-
-
-                <div class="header-top-text flex flex-1 justify-between items-center">
-
-                    <h2 class="header-text order-1 text-2xl text-white/90 font-bold pb-1 ">جستجوی مربی</h2>
-
-                    <div class="header-notif-icon bg-black px-2 py-3 rounded-[100%] flex items-center justify-center text-[1.3rem]">
-                        <i class="fa-regular fa-bell text-white"></i>
-                    </div>
-
-                </div>
-
-
-            </section>
-
-
-            <section class="search w-full flex justify-center items-center  border border-[#F5F5F7]/10 rounded-md px-2 py-[.2rem] gap-2">
-
-                <button class="search-icon text-white text-[.8rem] pt-[.2rem]">
-                    <i class="fa fa-search"></i>
-                </button>
-
-                <div class="search-input flex-1">
-                    <input type="search" placeholder="نام مربی یا تخصص ..." class="w-full p-1 outline-none border-none bg-transparent text-white/70 placeholder:text-[#F5F5F7]/30">
-                </div>
-
-
-            </section>
-
-
-            <nav class="header-nav w-full flex bg-black rounded-2xl px-3 py-1 gap-2">
-
-                <button class="header-nav-item list flex items-center justify-between text-[#8E8E93] order-1 gap-2  py-1 px-4 text-xs font-bold rounded-2xl ">
-                    <h2 class="list-text">لیست</h2>
-                    <i class="fa-solid fa-list"></i>
-                </button>
-
-                <button class="header-nav-item map flex items-center justify-between text-[#8E8E93] gap-2 py-1 px-4 text-xs font-bold rounded-2xl ">
-                    <h2 class="map-text">نقشه</h2>
-                    <i class="fa-regular fa-map"></i>
-                </button>
-
-
-            </nav>
-
-
-        </div>
-    </header>
-
-    <main id="main" class="w-full overflow-hidden bg-black">
-        <div class="main-container w-full px-6">
-
-
-            <section class="filter w-full flex bg-black  py-1 gap-2 overflow-auto py-5">
-
-
-                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-[.5rem]  px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
-                    <a class="filter-text text-nowrap" href="#">حرفه ای</a>
-                </button>
-
-                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-[.5rem] px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
-                    <a class="filter-text text-nowrap" href="#">انلاین</a>
-                </button>
-
-                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-[.5rem] px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
-                    <a class="filter-text text-nowrap" href="#">بانوان</a>
-                </button>
-
-                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-[.5rem] px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
-                    <a class="filter-text text-nowrap" href="#">اقایان</a>
-                </button>
-
-                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-[.5rem]  px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
-                    <a class="filter-text text-nowrap" href="#">حرفه ای</a>
-                </button>
-
-                <button class="filter-item list flex items-center justify-center text-[#8E8E93]  gap-2 py-[.5rem]  px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[28%] ">
-                    <a class="filter-text text-nowrap" href="#">حرفه ای</a>
-                </button>
-
-
-            </section>
-
-
-            <article id="coach-card" class="w-full my-7">
-                <div class="coach-card-container w-full rounded-3xl">
-
-
-                    <div class="card-img w-full h-[7.5rem] relative">
-                        <img src="assets/image/victor-freitas-Yuv-iwByVRQ-unsplash.jpg" class="w-full h-full object-cover rounded-t-3xl absolute inset-0"  alt="card img">
-                        <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-[#1C1C1E]/[95%] via-[#1C1C1E]/60 to-transparent"></div>
-                    </div>
-
-                    <div class="card-body rounded-b-3xl w-full bg-[#1C1C1E] flex flex-col justify-center gap-2 pt-3 pb-7 px-4">
-
-                        <div class="card-header flex justify-between items-center text-white gap-3">
-
-
-                            <div class="coach-img w-[5rem] h-[5rem] order-1">
-
-                                <img src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg" class="w-full h-full object-fit rounded-3xl" alt="coach image">
-
-                            </div>
-
-                            <div class="coach-bio-container flex flex-1 justify-between">
-
-                                <div class="save-btn-container pt-2 text-[#8E8E93]/90"><button class="save-btn"><i class="fa-regular fa-bookmark"></i></button></div>
-
-                                <div class="coach-info flex flex-col items-end justify-center">
-
-
-                                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">امیررضا مهدوی</h2>
-
-                                    <h3 class="coach-target text-[.8rem] text-[#F5A623] font-bold ">بدنسازی و فیتنس</h3>
-
-                                    <div class="coach-rank-container flex justify-between items-center gap-4">
-
-
-                                        <div class="coach-score order-1 text-[.8rem]">4.9<i class="fa fa-star ml-1 text-yellow-400"></i></div>
-
-                                        <div class="coach-experience text-[.7rem]">8 سال تجربه<i class="fa-solid fa-clock-rotate-left ml-1"></i></div>
-
-
-                                    </div>
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-
-                        <div class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white ">
-
-                            <h2 class="card-text"> << کمکت میکنم بدون فشار اضافه و اگاهانه پیشرفت کنی >></h2>
-
-                        </div>
-
-                        <div class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3">
-
-                            <div class="card-tags flex justify-center items-center order-1 gap-1 ">
-
-
-                                <div class="card-tag order-1 bg-[#8E8E93]/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">انلاین</h3>
-                                </div>
-
-                                <div class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">برنامه اختصاصی</h3>
-                                </div>
-
-
-                            </div>
-
-                            <div class="view-profile text-white/90 text-[.75rem] font-bold ">
-                                <a href="#" class="view-profile-link">مشاهده پروفایل</a>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                </div>
-            </article>
-
-
-            <article id="coach-card" class="w-full my-7">
-                <div class="coach-card-container w-full rounded-3xl">
-
-
-                    <div class="card-img w-full h-[7.5rem] relative">
-                        <img src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg" class="w-full h-full object-cover rounded-t-3xl absolute inset-0"  alt="card img">
-                        <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-[#1C1C1E]/[95%] via-[#1C1C1E]/60 to-transparent"></div>
-                    </div>
-
-                    <div class="card-body rounded-b-3xl w-full bg-[#1C1C1E] flex flex-col justify-center gap-2 pt-3 pb-7 px-4">
-
-                        <div class="card-header flex justify-between items-center text-white gap-3">
-
-
-                            <div class="coach-img w-[5rem] h-[5rem] order-1">
-
-                                <img src="assets/image/anastase-maragos-9dzWZQWZMdE-unsplash.jpg" class="w-full h-full object-fit rounded-3xl" alt="coach image">
-
-                            </div>
-
-                            <div class="coach-bio-container flex flex-1 justify-between">
-
-                                <div class="save-btn-container pt-2 text-[#8E8E93]/90"><button class="save-btn"><i class="fa-regular fa-bookmark"></i></button></div>
-
-                                <div class="coach-info flex flex-col items-end justify-center">
-
-
-                                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">سارا احمدی</h2>
-
-                                    <h3 class="coach-target text-[.8rem] text-[#F5A623] font-bold ">یوگا و پیلاتس</h3>
-
-                                    <div class="coach-rank-container flex justify-between items-center gap-4">
-
-
-                                        <div class="coach-score order-1 text-[.8rem]">5<i class="fa fa-star ml-1 text-yellow-400"></i></div>
-
-                                        <div class="coach-experience text-[.7rem]">5 سال تجربه<i class="fa-solid fa-clock-rotate-left ml-1"></i></div>
-
-
-                                    </div>
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-
-                        <div class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white ">
-
-                            <h2 class="card-text"> << تمرکز بر ذهن و جسم برای رسیدن به ارامش و تعادل >></h2>
-
-                        </div>
-
-                        <div class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3">
-
-                            <div class="card-tags flex justify-center items-center order-1 gap-1 ">
-
-
-                                <div class="card-tag order-1 bg-[#8E8E93]/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">حضوری</h3>
-                                </div>
-
-                                <div class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">بانوان</h3>
-                                </div>
-
-
-                            </div>
-
-                            <div class="view-profile text-white/90 text-[.75rem] font-bold ">
-                                <a href="#" class="view-profile-link">مشاهده پروفایل</a>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                </div>
-            </article>
-
-
-            <article id="coach-card" class="w-full my-7">
-                <div class="coach-card-container w-full rounded-3xl">
-
-
-                    <div class="card-img w-full h-[7.5rem] relative">
-                        <img src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg" class="w-full h-full object-cover rounded-t-3xl absolute inset-0"  alt="card img">
-                        <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-[#1C1C1E]/[95%] via-[#1C1C1E]/60 to-transparent"></div>
-                    </div>
-
-                    <div class="card-body rounded-b-3xl w-full bg-[#1C1C1E] flex flex-col justify-center gap-2 pt-3 pb-7 px-4">
-
-                        <div class="card-header flex justify-between items-center text-white gap-3">
-
-
-                            <div class="coach-img w-[5rem] h-[5rem] order-1">
-
-                                <img src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg" class="w-full h-full object-fit rounded-3xl" alt="coach image">
-
-                            </div>
-
-                            <div class="coach-bio-container flex flex-1 justify-between">
-
-                                <div class="save-btn-container pt-2 text-[#8E8E93]/90"><button class="save-btn"><i class="fa-regular fa-bookmark"></i></button></div>
-
-                                <div class="coach-info flex flex-col items-end justify-center">
-
-
-                                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">حسین کریمی</h2>
-
-                                    <h3 class="coach-target text-[.8rem] text-[#F5A623] font-bold ">کاهش وزن سریع</h3>
-
-                                    <div class="coach-rank-container flex justify-between items-center gap-4">
-
-
-                                        <div class="coach-score order-1 text-[.8rem]">4.7<i class="fa fa-star ml-1 text-yellow-400"></i></div>
-
-                                        <div class="coach-experience text-[.7rem]">12 سال تجربه<i class="fa-solid fa-clock-rotate-left ml-1"></i></div>
-
-
-                                    </div>
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-
-                        <div class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white ">
-
-                            <h2 class="card-text"> << تغییر سبک زندگی کلید ماندگاری تناسب اندام شماست >></h2>
-
-                        </div>
-
-                        <div class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3">
-
-                            <div class="card-tags flex justify-center items-center order-1 gap-1 ">
-
-
-                                <div class="card-tag order-1 bg-[#8E8E93]/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">انلاین</h3>
-                                </div>
-
-                                <div class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">رژیم اختصاصی</h3>
-                                </div>
-
-
-                            </div>
-
-                            <div class="view-profile text-white/90 text-[.75rem] font-bold ">
-                                <a href="#" class="view-profile-link">مشاهده پروفایل</a>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                </div>
-            </article>
-
-
-            <article id="coach-card" class="w-full my-7">
-                <div class="coach-card-container w-full rounded-3xl">
-
-
-                    <div class="card-img w-full h-[7.5rem] relative">
-                        <img src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg" class="w-full h-full object-cover rounded-t-3xl absolute inset-0"  alt="card img">
-                        <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-[#1C1C1E]/[95%] via-[#1C1C1E]/60 to-transparent"></div>
-                    </div>
-
-                    <div class="card-body rounded-b-3xl w-full bg-[#1C1C1E] flex flex-col justify-center gap-2 pt-3 pb-7 px-4">
-
-                        <div class="card-header flex justify-between items-center text-white gap-3">
-
-
-                            <div class="coach-img w-[5rem] h-[5rem] order-1">
-
-                                <img src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg" class="w-full h-full object-fit rounded-3xl" alt="coach image">
-
-                            </div>
-
-                            <div class="coach-bio-container flex flex-1 justify-between">
-
-                                <div class="save-btn-container pt-2 text-[#8E8E93]/90"><button class="save-btn"><i class="fa-regular fa-bookmark"></i></button></div>
-
-                                <div class="coach-info flex flex-col items-end justify-center">
-
-
-                                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">امیررضا مهدوی</h2>
-
-                                    <h3 class="coach-target text-[.8rem] text-[#F5A623] font-bold ">بدنسازی و فیتنس</h3>
-
-                                    <div class="coach-rank-container flex justify-between items-center gap-4">
-
-
-                                        <div class="coach-score order-1 text-[.8rem]">4.9<i class="fa fa-star ml-1 text-yellow-400"></i></div>
-
-                                        <div class="coach-experience text-[.7rem]">8 سال تجربه<i class="fa-solid fa-clock-rotate-left ml-1"></i></div>
-
-
-                                    </div>
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-
-                        <div class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white ">
-
-                            <h2 class="card-text"> << کمکت میکنم بدون فشار اضافه و اگاهانه پیشرفت کنی >></h2>
-
-                        </div>
-
-                        <div class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3">
-
-                            <div class="card-tags flex justify-center items-center order-1 gap-1 ">
-
-
-                                <div class="card-tag order-1 bg-[#8E8E93]/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">انلاین</h3>
-                                </div>
-
-                                <div class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold ">
-                                    <h3 class="card-tag-text">برنامه اختصاصی</h3>
-                                </div>
-
-
-                            </div>
-
-                            <div class="view-profile text-white/90 text-[.75rem] font-bold ">
-                                <a href="#" class="view-profile-link">مشاهده پروفایل</a>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                </div>
-            </article>
-
-
-
-        </div>
-    </main>
-
-    <footer id="footer w-full">
-      <div class="footer-container w-full bg-[#1C1C1E]/80 px-6 py-4">
-        <nav class="footer-nav w-full">
-          <div class="footer-nav-container w-full flex justify-between">
+  </head>
+  <body class="bg-black flex flex-col h-screen">
+    <!-- header -->
+    <header class="px-6 py-3 bg-surface w-full">
+      <div
+        class="header-container w-full flex flex-col items-center justify-center gap-5"
+      >
+        <!-- header top -->
+        <section class="w-full flex justify-between items-center gap-2">
+          <!-- header top right icon -->
+          <div
+            class="header-top-right-icon order-1 bg-white flex rounded-xl p-2"
+          >
+            <i class="fa-solid fa-question"></i>
+          </div>
+
+          <!-- header text -->
+          <div class="flex flex-1 justify-between items-center">
+            <h2 class="order-1 text-2xl text-white/90 font-bold pb-1">
+              جستجوی مربی
+            </h2>
+            <!-- header notif icon -->
             <div
-              class="footer-col footer-col-1 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+              class="header-notif-icon bg-black px-2 py-3 rounded-[100%] flex items-center justify-center text-[1.3rem]"
+            >
+              <i class="fa-regular fa-bell text-white"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- search  -->
+        <section
+          class="w-full flex justify-center items-center border border-[#F5F5F7]/10 rounded-md px-2 py-[.2rem] gap-2"
+        >
+          <!-- search icon button  -->
+          <button class="search-icon text-white text-[.8rem] pt-[.2rem]">
+            <i class="fa fa-search"></i>
+          </button>
+          <!-- search input  -->
+          <div class="search-input flex-1">
+            <input
+              type="search"
+              placeholder="نام مربی یا تخصص ..."
+              class="w-full p-1 outline-none border-none bg-transparent text-white/70 placeholder:text-[#F5F5F7]/30"
+            />
+          </div>
+        </section>
+
+        <!-- header navbar -->
+        <nav
+          class="header-nav w-full flex bg-black rounded-2xl px-3 py-1 gap-2"
+        >
+          <!-- header nav item -->
+          <button
+            class="header-nav-item list flex items-center justify-between text-secondaryText order-1 gap-2 py-1 px-4 text-xs font-bold rounded-2xl"
+          >
+            <h2>لیست</h2>
+            <i class="fa-solid fa-list"></i>
+          </button>
+          <!-- header nav item -->
+          <button
+            class="header-nav-item map flex items-center justify-between text-secondaryText gap-2 py-1 px-4 text-xs font-bold rounded-2xl"
+          >
+            <h2>نقشه</h2>
+            <i class="fa-regular fa-map"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- main -->
+    <main  class="w-full bg-black flex-1">
+      <div class="main-container w-full px-6">
+        <!-- filter -->
+        <section class="w-full flex bg-black py-1 gap-2 overflow-auto py-5">
+          <!-- filter item  -->
+          <button
+            class="list flex items-center justify-center text-secondaryText gap-2 py-[.5rem] px-6 text-sm font-bold rounded-3xl text-white bg-surface border border-[#F5F5F7]/10 min-w-[28%]"
+          >
+            <a class="filter-text text-nowrap" href="#">حرفه ای</a>
+          </button>
+        </section>
+
+        <!-- coach card -->
+        <article class="w-full my-7">
+          <div class="coach-card-container w-full rounded-3xl">
+            <!-- coach image -->
+            <div class="card-img w-full h-[7.5rem] relative">
+              <img
+                src="assets/image/victor-freitas-Yuv-iwByVRQ-unsplash.jpg"
+                class="w-full h-full object-cover rounded-t-3xl absolute inset-0"
+                alt="card img"
+              />
+              <div
+                class="absolute w-full h-full inset-0 bg-gradient-to-t from-surface/[95%] via-surface/60 to-transparent"
+              ></div>
+            </div>
+            <!-- coach body -->
+            <div
+              class="card-body rounded-b-3xl w-full bg-surface flex flex-col justify-center gap-2 pt-3 pb-7 px-4"
+            >
+              <!-- body header -->
+              <div
+                class="card-header flex justify-between items-center text-white gap-3"
+              >
+                <div class="coach-img w-[5rem] h-[5rem] order-1">
+                  <img
+                    src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg"
+                    class="w-full h-full object-fit rounded-3xl"
+                    alt="coach image"
+                  />
+                </div>
+                <!-- coach bio -->
+                <div class="coach-bio-container flex flex-1 justify-between">
+                  <div class="save-btn-container pt-2 text-secondaryText/90">
+                    <button class="save-btn">
+                      <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                  </div>
+                  <!-- coach info -->
+                  <div
+                    class="coach-info flex flex-col items-end justify-center"
+                  >
+                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">
+                      امیررضا مهدوی
+                    </h2>
+
+                    <h3 class="coach-target text-[.8rem] text-accent font-bold">
+                      بدنسازی و فیتنس
+                    </h3>
+                    <!-- coach rank -->
+                    <div
+                      class="coach-rank-container flex justify-between items-center gap-4"
+                    >
+                      <div class="coach-score order-1 text-[.8rem]">
+                        4.9<i class="fa fa-star ml-1 text-yellow-400"></i>
+                      </div>
+
+                      <div class="coach-experience text-[.7rem]">
+                        8 سال تجربه<i
+                          class="fa-solid fa-clock-rotate-left ml-1"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white"
+              >
+                <h2 class="card-text">
+                  << کمکت میکنم بدون فشار اضافه و اگاهانه پیشرفت کنی >>
+                </h2>
+              </div>
+
+              <div
+                class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3"
+              >
+                <div
+                  class="card-tags flex justify-center items-center order-1 gap-1"
+                >
+                  <div
+                    class="card-tag order-1 bg-secondaryText/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">انلاین</h3>
+                  </div>
+
+                  <div
+                    class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">برنامه اختصاصی</h3>
+                  </div>
+                </div>
+
+                <div class="view-profile text-white/90 text-[.75rem] font-bold">
+                  <a href="#" class="view-profile-link">مشاهده پروفایل</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="w-full my-7">
+          <div class="coach-card-container w-full rounded-3xl">
+            <!-- coach image -->
+            <div class="card-img w-full h-[7.5rem] relative">
+              <img
+                src="assets/image/victor-freitas-Yuv-iwByVRQ-unsplash.jpg"
+                class="w-full h-full object-cover rounded-t-3xl absolute inset-0"
+                alt="card img"
+              />
+              <div
+                class="absolute w-full h-full inset-0 bg-gradient-to-t from-surface/[95%] via-surface/60 to-transparent"
+              ></div>
+            </div>
+            <!-- coach body -->
+            <div
+              class="card-body rounded-b-3xl w-full bg-surface flex flex-col justify-center gap-2 pt-3 pb-7 px-4"
+            >
+              <!-- body header -->
+              <div
+                class="card-header flex justify-between items-center text-white gap-3"
+              >
+                <div class="coach-img w-[5rem] h-[5rem] order-1">
+                  <img
+                    src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg"
+                    class="w-full h-full object-fit rounded-3xl"
+                    alt="coach image"
+                  />
+                </div>
+                <!-- coach bio -->
+                <div class="coach-bio-container flex flex-1 justify-between">
+                  <div class="save-btn-container pt-2 text-secondaryText/90">
+                    <button class="save-btn">
+                      <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                  </div>
+                  <!-- coach info -->
+                  <div
+                    class="coach-info flex flex-col items-end justify-center"
+                  >
+                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">
+                      امیررضا مهدوی
+                    </h2>
+
+                    <h3 class="coach-target text-[.8rem] text-accent font-bold">
+                      بدنسازی و فیتنس
+                    </h3>
+                    <!-- coach rank -->
+                    <div
+                      class="coach-rank-container flex justify-between items-center gap-4"
+                    >
+                      <div class="coach-score order-1 text-[.8rem]">
+                        4.9<i class="fa fa-star ml-1 text-yellow-400"></i>
+                      </div>
+
+                      <div class="coach-experience text-[.7rem]">
+                        8 سال تجربه<i
+                          class="fa-solid fa-clock-rotate-left ml-1"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white"
+              >
+                <h2 class="card-text">
+                  << کمکت میکنم بدون فشار اضافه و اگاهانه پیشرفت کنی >>
+                </h2>
+              </div>
+
+              <div
+                class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3"
+              >
+                <div
+                  class="card-tags flex justify-center items-center order-1 gap-1"
+                >
+                  <div
+                    class="card-tag order-1 bg-secondaryText/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">انلاین</h3>
+                  </div>
+
+                  <div
+                    class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">برنامه اختصاصی</h3>
+                  </div>
+                </div>
+
+                <div class="view-profile text-white/90 text-[.75rem] font-bold">
+                  <a href="#" class="view-profile-link">مشاهده پروفایل</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="w-full my-7">
+          <div class="coach-card-container w-full rounded-3xl">
+            <!-- coach image -->
+            <div class="card-img w-full h-[7.5rem] relative">
+              <img
+                src="assets/image/victor-freitas-Yuv-iwByVRQ-unsplash.jpg"
+                class="w-full h-full object-cover rounded-t-3xl absolute inset-0"
+                alt="card img"
+              />
+              <div
+                class="absolute w-full h-full inset-0 bg-gradient-to-t from-surface/[95%] via-surface/60 to-transparent"
+              ></div>
+            </div>
+            <!-- coach body -->
+            <div
+              class="card-body rounded-b-3xl w-full bg-surface flex flex-col justify-center gap-2 pt-3 pb-7 px-4"
+            >
+              <!-- body header -->
+              <div
+                class="card-header flex justify-between items-center text-white gap-3"
+              >
+                <div class="coach-img w-[5rem] h-[5rem] order-1">
+                  <img
+                    src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg"
+                    class="w-full h-full object-fit rounded-3xl"
+                    alt="coach image"
+                  />
+                </div>
+                <!-- coach bio -->
+                <div class="coach-bio-container flex flex-1 justify-between">
+                  <div class="save-btn-container pt-2 text-secondaryText/90">
+                    <button class="save-btn">
+                      <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                  </div>
+                  <!-- coach info -->
+                  <div
+                    class="coach-info flex flex-col items-end justify-center"
+                  >
+                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">
+                      امیررضا مهدوی
+                    </h2>
+
+                    <h3 class="coach-target text-[.8rem] text-accent font-bold">
+                      بدنسازی و فیتنس
+                    </h3>
+                    <!-- coach rank -->
+                    <div
+                      class="coach-rank-container flex justify-between items-center gap-4"
+                    >
+                      <div class="coach-score order-1 text-[.8rem]">
+                        4.9<i class="fa fa-star ml-1 text-yellow-400"></i>
+                      </div>
+
+                      <div class="coach-experience text-[.7rem]">
+                        8 سال تجربه<i
+                          class="fa-solid fa-clock-rotate-left ml-1"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white"
+              >
+                <h2 class="card-text">
+                  << کمکت میکنم بدون فشار اضافه و اگاهانه پیشرفت کنی >>
+                </h2>
+              </div>
+
+              <div
+                class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3"
+              >
+                <div
+                  class="card-tags flex justify-center items-center order-1 gap-1"
+                >
+                  <div
+                    class="card-tag order-1 bg-secondaryText/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">انلاین</h3>
+                  </div>
+
+                  <div
+                    class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">برنامه اختصاصی</h3>
+                  </div>
+                </div>
+
+                <div class="view-profile text-white/90 text-[.75rem] font-bold">
+                  <a href="#" class="view-profile-link">مشاهده پروفایل</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="w-full my-7">
+          <div class="coach-card-container w-full rounded-3xl">
+            <!-- coach image -->
+            <div class="card-img w-full h-[7.5rem] relative">
+              <img
+                src="assets/image/victor-freitas-Yuv-iwByVRQ-unsplash.jpg"
+                class="w-full h-full object-cover rounded-t-3xl absolute inset-0"
+                alt="card img"
+              />
+              <div
+                class="absolute w-full h-full inset-0 bg-gradient-to-t from-surface/[95%] via-surface/60 to-transparent"
+              ></div>
+            </div>
+            <!-- coach body -->
+            <div
+              class="card-body rounded-b-3xl w-full bg-surface flex flex-col justify-center gap-2 pt-3 pb-7 px-4"
+            >
+              <!-- body header -->
+              <div
+                class="card-header flex justify-between items-center text-white gap-3"
+              >
+                <div class="coach-img w-[5rem] h-[5rem] order-1">
+                  <img
+                    src="assets/image/victor-freitas-WvDYdXDzkhs-unsplash.jpg"
+                    class="w-full h-full object-fit rounded-3xl"
+                    alt="coach image"
+                  />
+                </div>
+                <!-- coach bio -->
+                <div class="coach-bio-container flex flex-1 justify-between">
+                  <div class="save-btn-container pt-2 text-secondaryText/90">
+                    <button class="save-btn">
+                      <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                  </div>
+                  <!-- coach info -->
+                  <div
+                    class="coach-info flex flex-col items-end justify-center"
+                  >
+                    <h2 class="coach-name text-[1.3rem] font-bold pb-[.04rem]">
+                      امیررضا مهدوی
+                    </h2>
+
+                    <h3 class="coach-target text-[.8rem] text-accent font-bold">
+                      بدنسازی و فیتنس
+                    </h3>
+                    <!-- coach rank -->
+                    <div
+                      class="coach-rank-container flex justify-between items-center gap-4"
+                    >
+                      <div class="coach-score order-1 text-[.8rem]">
+                        4.9<i class="fa fa-star ml-1 text-yellow-400"></i>
+                      </div>
+
+                      <div class="coach-experience text-[.7rem]">
+                        8 سال تجربه<i
+                          class="fa-solid fa-clock-rotate-left ml-1"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-text-container bg-black rounded-2xl text-[.85rem] text-right px-3 py-3 text-white"
+              >
+                <h2 class="card-text">
+                  << کمکت میکنم بدون فشار اضافه و اگاهانه پیشرفت کنی >>
+                </h2>
+              </div>
+
+              <div
+                class="card-footer flex justify-between items-center rounded-b-3xl px-4 py-3"
+              >
+                <div
+                  class="card-tags flex justify-center items-center order-1 gap-1"
+                >
+                  <div
+                    class="card-tag order-1 bg-secondaryText/30 py-[.1rem] px-4 rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">انلاین</h3>
+                  </div>
+
+                  <div
+                    class="card-tag bg-[#E0A458]/20 px-3 py-[.1rem] rounded-lg text-white text-[.6rem] font-bold"
+                  >
+                    <h3 class="card-tag-text">برنامه اختصاصی</h3>
+                  </div>
+                </div>
+
+                <div class="view-profile text-white/90 text-[.75rem] font-bold">
+                  <a href="#" class="view-profile-link">مشاهده پروفایل</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </main>
+    <!-- footer -->
+    <footer  class="fixed left-0 bottom-0 w-full">
+      <div class="footer-container w-full bg-surface px-6 py-4">
+        <!-- footer nav -->
+        <nav class=" w-full">
+          <div class="footer-nav-container w-full flex justify-between">
+            <!-- footer item -->
+            <div
+              class="footer-col flex flex-col justify-center items-center text-[#8E8E93] gap-2"
             >
               <i class="fa-regular fa-user text-[1.2rem]"></i>
               <button class="footer-nav-btn text-[.75rem]">پروفایل</button>
             </div>
+            <!-- footer item -->
             <div
-              class="footer-col footer-col-2 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+              class="footer-col flex flex-col justify-center items-center text-[#8E8E93] gap-2"
             >
               <i class="fa-regular fa-message text-[1.2rem]"></i>
               <button class="footer-nav-btn text-[.75rem]">پیام ها</button>
             </div>
+            <!-- footer item -->
             <div
-              class="footer-col footer-col-3 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+              class="footer-col flex flex-col justify-center items-center text-[#8E8E93] gap-2"
             >
               <i class="fa-regular fa-compass text-[1.2rem]"></i>
               <button class="footer-nav-btn text-[.75rem]">فعالیت</button>
             </div>
+            <!-- footer item -->
             <div
-              class="footer-col footer-col-4 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
+              class="footer-col flex flex-col justify-center items-center text-[#8E8E93] gap-2"
             >
               <i class="fa-solid fa-magnifying-glass text-[1.2rem]"></i>
               <button class="footer-nav-btn text-[.75rem]">جست و جو</button>
             </div>
+            <!-- footer item -->
             <div
               class="footer-col footer-col-5 flex flex-col justify-center items-center text-[#8E8E93] gap-2"
             >
               <i class="fa-solid fa-house text-[1.2rem]"></i>
               <button class="footer-nav-btn text-[.75rem]">خانه</button>
             </div>
+
           </div>
         </nav>
       </div>
     </footer>
 
     <script src="assets/js/coachDiscovery.js"></script>
-</body>
+  </body>
 </html>
