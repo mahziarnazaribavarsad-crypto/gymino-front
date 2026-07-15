@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              surface: "#1c1c1e",
+              secondaryText: "#8e8e93",
+              success: "#6b8f7d",
+              info: "#0a84ff",
+              white: "white",
+              black: "black",
+              warning: "#ffd60a",
+              accent: "#f5a623",
+              accentBlack: "rgb(245 166 35 / 0.1)",
+              error: "#ff453a",
+            },
+          },
+        },
+      };
+    </script>
     <link rel="stylesheet" href="assets/css/splash.css" />
     <title>Document</title>
   </head>
@@ -29,8 +49,8 @@
       <div
         class="relative flex w-full h-full items-center justify-center flex-col text-white text-[25px]"
       >
-        <h1 class="splash-h1">جیمینو</h1>
-        <h4 class="splash-h4">با جیمینو اگاهانه ورزش کن</h4>
+        <h1>جیمینو</h1>
+        <h4>با جیمینو اگاهانه ورزش کن</h4>
       </div>
       <!-- loading icon -->
       <div
@@ -50,7 +70,7 @@
         </svg>
         <h3 class="text-sm text-white">درحال اماده سازی مسیر ورزشی شما</h3>
       </div>
-      
+
     </main>
     <script src="assets/js/script.js"></script>
   </body>
