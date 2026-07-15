@@ -1,768 +1,609 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        surface: '#1c1c1e',
-                        secondaryText: '#8e8e93',
-                        success: '#6b8f7d',
-                        info: '#0a84ff',
-                        white: 'white',
-                        black: 'black',
-                        warning:'#ffd60a',
-                        accent : '#f5a623',
-                        accentBlack : 'rgb(245 166 35 / 0.1)',
-                        error: '#ff453a'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              surface: "#1c1c1e",
+              secondaryText: "#8e8e93",
+              success: "#6b8f7d",
+              info: "#0a84ff",
+              white: "white",
+              black: "black",
+              warning: "#ffd60a",
+              accent: "#f5a623",
+              accentBlack: "rgb(245 166 35 / 0.1)",
+              error: "#ff453a",
+            },
+          },
+        },
+      };
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"/>
-    <link rel="stylesheet" href="assets/css/programBuilder.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+    />
+    <link rel="stylesheet" href="assets/css/programBuilder.css" />
     <title>Document</title>
-</head>
-<body class="bg-black">
-    <nav id="nav" class="w-full bg-surface px-6 py-5">
-        <div class="nav-container  w-full  flex  justify-between items-center h-full">
+  </head>
+  <body class="bg-black">
 
-            <div class="next text-white">
-                <a href="#" class="next-link"><i class="fa-solid fa-arrow-left"></i></a>
-            </div>
-
-            <div class="nav-text-container text-white">
-                <h1 class="nav-text">طراحی برنامه تمرینی</h1>
-            </div>
-
-            <div class="more-menu text-white">
-                <a href="#" class="menu-link text-lg">دخیره</a>
-            </div>
-
-
+    <!-- top navbar -->
+    <nav id="nav-top" class="w-full bg-surface px-6 py-5">
+      <div
+        class="nav-container w-full flex justify-between items-center h-full"
+      >
+      <!-- nav icon -->
+        <div class="text-white">
+          <a href="#" class="next-link"
+            ><i class="fa-solid fa-arrow-left"></i
+          ></a>
         </div>
+
+        <!-- nav text -->
+        <div class="text-white">
+          <h1>طراحی برنامه تمرینی</h1>
+        </div>
+
+        <!-- nav save link -->
+        <div class="text-white">
+          <a href="#" class="text-lg">دخیره</a>
+        </div>
+
+      </div>
     </nav>
 
-    <header class="header px-6 pt-4 pb-6 ">
-          <div class="header-banner-container relative h-[180px] flex flex-col justify-center items-center">
-            <img
-              src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg"
-              class="w-full h-full rounded-3xl absolute inset-0"
-              alt="banner"
-            />
-            <div
-              class="banner-shadow absolute inset-0 rounded-3xl bg-gradient-to-t from-black/70 via-black/60 via-black/30 to-transparent"
-            ></div>
+    <!-- header -->
+    <header class="px-6 pt-4 pb-6">
+        <!-- header banner -->
+      <div class="relative h-[180px] flex flex-col justify-center items-center">
+        <!-- header banner image -->
+        <img
+          src="assets/image/bo-zhang-wIFI9f6eISs-unsplash.jpg"
+          class="w-full h-full rounded-3xl absolute inset-0"
+          alt="banner"
+        />
+        <!-- banner shadow -->
+        <div
+          class="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/70 via-black/60 via-black/30 to-transparent"
+        ></div>
 
-            <a href="#" class=" bg-black/40 text-white w-[90%] h-[30px] absolute bottom-5 rounded-3xl flex justify-center items-center">
-                <div class="flex h-full items-center gap-2">
-                    <div class="pb-1"><i class="fa-solid fa-car text-xs"></i></div>
-                    <h1 class="text-xs pb-1 font-bold">تغییر تصویر کاور</h1>
-                </div>
-            </a>
-
+        <!-- change banner link -->
+        <a
+          href="#"
+          class="bg-black/40 text-white w-[90%] h-[30px] absolute bottom-5 rounded-3xl flex justify-center items-center"
+        >
+          <div class="flex h-full items-center gap-2">
+            <div class="pb-1"><i class="fa-solid fa-car text-xs"></i></div>
+            <h1 class="text-xs pb-1 font-bold">تغییر تصویر کاور</h1>
           </div>
+        </a>
 
-          <div class="header-text text-right pt-4">
-            <h1 class="top-text text-white text-xl pb-1">ساخت برنامه جدید</h1>
-            <h1 class="bottom-text text-secondaryText text-md">حرکت رااضافه و جزعیات را تنظیم کنید</h1>
-          </div>
+      </div>
+        <!-- header text -->
+      <div class="pt-4">
+        <h1 class="text-white text-xl pb-1">ساخت برنامه جدید</h1>
+        <h1 class="text-secondaryText text-md">
+          حرکت رااضافه و جزعیات را تنظیم کنید
+        </h1>
+      </div>
+
     </header>
 
-    <main id="main" class="w-full pb-[100px]">
-        <div class="main-container w-full h-full px-6">
+    <!-- main -->
+    <main class="w-full pb-[100px]">
+      <div class="main-container w-full h-full px-6">
 
+        <!-- program-category  -->
+        <section
+          class="w-full flex flex-col gap-3 overflow-auto"
+        >
+          <div class="flex justify-end">
+            <h1 class="filter-text text-white font-bold">دسته بندی تمرین</h1>
+          </div>
 
-        <section class="program-category w-full flex flex-col gap-3 overflow-auto">
+          <div class="w-full flex py-1 gap-4 overflow-auto">
+            <a
+              href="#"
+              class="filter-item list flex flex-col items-center justify-center text-[#8E8E93] gap-1 py-4 px-6 text-sm font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[30%]"
+            >
+              <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
+              <h1>قدرتی</h1>
+            </a>
 
-            <div class="flex justify-end"><h1 class="filter-text text-white font-bold">دسته بندی تمرین</h1></div>
+            <a
+              href="#"
+              class="filter-item list flex flex-col items-center justify-center text-[#8E8E93] gap-1 py-4 px-6 text-sm font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[30%]"
+            >
+              <div class="icon">
+                <i class="fa-solid fa-heart text-error text-xl"></i>
+              </div>
+              <h1>هوازی</h1>
+            </a>
 
-            <div class="w-full flex py-1 gap-4 overflow-auto">
+            <a
+              href="#"
+              class="filter-item list flex flex-col items-center justify-center text-[#8E8E93] gap-1 py-4 px-6 text-sm font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[30%]"
+            >
+              <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
+              <h1>قدرتی</h1>
+            </a>
 
-                <a href="#" class="filter-item list flex flex-col items-center justify-center text-[#8E8E93]  gap-1 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[30%] ">
-                    <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
-                    <h1>قدرتی</h1>
-                </a>
+            <a
+              href="#"
+              class="filter-item list flex flex-col items-center justify-center text-[#8E8E93] gap-1 py-4 px-6 text-sm font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[35%]"
+            >
+              <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
+              <h1>قدرتی</h1>
+            </a>
 
-                <a href="#" class="filter-item list flex flex-col items-center justify-center text-[#8E8E93]  gap-1 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[30%] ">
-                    <div class="icon"><i class="fa-solid fa-heart text-error text-xl"></i></div>
-                    <h1>هوازی</h1>
-                </a>
-
-                <a href="#" class="filter-item list flex flex-col items-center justify-center text-[#8E8E93]  gap-1 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[30%] ">
-                    <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
-                    <h1>قدرتی</h1>
-                </a>
-
-
-                <a href="#" class="filter-item list flex flex-col items-center justify-center text-[#8E8E93]  gap-1 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[35%] ">
-                    <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
-                    <h1>قدرتی</h1>
-                </a>
-
-                <a href="#" class="filter-item list flex flex-col items-center justify-center text-[#8E8E93]  gap-1 py-4 px-6 text-sm  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[35%] ">
-                    <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
-                    <h1>قدرتی</h1>
-                </a>
-            </div>
-
-
-
-
-
+            <a
+              href="#"
+              class="filter-item list flex flex-col items-center justify-center text-[#8E8E93] gap-1 py-4 px-6 text-sm font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 min-w-[35%]"
+            >
+              <div class="icon"><i class="fa-solid fa-car text-xl"></i></div>
+              <h1>قدرتی</h1>
+            </a>
+          </div>
         </section>
 
-        <section class="ready-made-templates w-full flex bg-black  gap-5 flex-col overflow-auto py-5">
 
-                <div class="filter-row-1 text-right">
-                    <h1 class="text-white font-bold">الگو های اماده</h1>
+        <!-- ready-made-templates -->
+        <section
+          class="w-full flex bg-black gap-5 flex-col overflow-auto py-5"
+        >
+          <div class="text-right">
+            <h1 class="text-white font-bold">الگو های اماده</h1>
+          </div>
+
+          <div class="w-full flex bg-black gap-5 overflow-auto pb-5">
+            <a
+              href="#"
+              class="list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2 text-xs font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6"
+            >
+              <h1 class="text-nowrap" href="#">هیت (HIT)</h1>
+              <i class="fa-solid fa-car"></i>
+            </a>
+
+            <a
+              href="#"
+              class="list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2 text-xs font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6"
+            >
+              <div><h1 class="text-nowrap" href="#">حرکات کششی</h1></div>
+              <div><i class="fa-solid fa-car"></i></div>
+            </a>
+
+            <a
+              href="#"
+              class="list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2 px-6 text-xs font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6"
+            >
+              <div><h1 class="text-nowrap" href="#">حرکات کششی</h1></div>
+              <div><i class="fa-solid fa-car"></i></div>
+            </a>
+
+            <a
+              href="#"
+              class="list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2 text-xs font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6"
+            >
+              <div><h1 class="text-nowrap" href="#">حرکات کششی</h1></div>
+              <div><i class="fa-solid fa-car"></i></div>
+            </a>
+          </div>
+        </section>
+
+        <!-- create-program -->
+        <section  class="w-full">
+          <div
+            class="w-full h-full py-5 bg-surface border border-secondaryText/10 rounded-3xl px-5"
+          >
+            <div class="w-full text-right mb-4">
+              <h1 class="text-white text-sm font-bold mb-3">نام برنامه</h1>
+              <input
+                type="text"
+                class="w-full outline-none program-input text-white border border-secondaryText/10 rounded-lg p-2 text-right bg-transparent"
+              />
+            </div>
+
+            <div class="w-full text-right">
+              <h1 class="text-white text-sm font-bold mb-3">
+                توضیحات(اختیاری)
+              </h1>
+              <input
+                type="text"
+                class="w-full outline-none program-input text-white border border-secondaryText/10 rounded-lg p-2 text-right bg-transparent"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- trains -->
+        <section class="w-full my-5">
+          <div
+            class="flex w-full justify-between items-center flex-row-reverse mb-4"
+          >
+            <h1 class="text-white">لیست حرکات(5)</h1>
+            <a href="#" class="text-error">پاک کردن همه</a>
+          </div>
+
+          <div
+            class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4"
+          >
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-5">
+              <button class="text-red-500 text-2xl hover:text-red-400">
+                ×
+              </button>
+
+              <div class="flex items-center gap-3 flex-row-reverse text-right">
+                <div
+                  class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center"
+                >
+                  <span class="text-zinc-400 text-xl"> ⠿ </span>
                 </div>
 
-                <div class="filter-row-2 w-full flex bg-black  gap-5 overflow-auto pb-5 ">
+                <div>
+                  <h2 class="font-bold text-lg">پرس سینه دمبل</h2>
 
-                <a href="#" class="filter-item list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2  text-xs  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6 ">
-                    <h1 class="filter-text text-nowrap" href="#">هیت (HIT)</h1>
-                    <i class="fa-solid fa-car"></i>
-                </a>
+                  <p class="text-xs text-zinc-400">سینه</p>
+                </div>
+              </div>
+            </div>
 
-                <a href="#" class="filter-item list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2  text-xs  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6">
-                    <div><h1 class="filter-text text-nowrap" href="#">حرکات کششی</h1></div>
-                    <div><i class="fa-solid fa-car"></i></div>
-                </a>
+            <!-- Stats -->
+            <div class="flex justify-between">
+              <div class="grid grid-cols-3 text-center mb-5 flex-1">
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">استراحت</p>
 
-                <a href="#" class="filter-item list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2  px-6 text-xs  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6">
-                    <div><h1 class="filter-text text-nowrap" href="#">حرکات کششی</h1></div>
-                    <div><i class="fa-solid fa-car"></i></div>
-                </a>
-
-                <a href="#" class="filter-item list flex items-center justify-center text-[#8E8E93] pb-2 pt-1 gap-2   text-xs  font-bold rounded-3xl text-white bg-[#1C1C1E] border border-[#F5F5F7]/10 px-6">
-                    <div><h1 class="filter-text text-nowrap" href="#">حرکات کششی</h1></div>
-                    <div><i class="fa-solid fa-car"></i></div>
-                </a>
-
+                  <span class="text-sm text-zinc-400"> ۹۰ ثانیه </span>
                 </div>
 
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">تکرار</p>
 
-        </section>
-
-        <section class="create-program w-full">
-            <div class="create-program-container w-full h-full py-5 bg-surface border border-secondaryText/10 rounded-3xl px-5 ">
-
-                <div class="cp-row-1  w-full text-right mb-4">
-                    <h1 class="text-white text-sm font-bold mb-3">نام برنامه</h1>
-                    <input type="text" class="w-full outline-none program-input  text-white border border-secondaryText/10 rounded-lg p-2 text-right bg-transparent">
+                  <span class="text-sm text-zinc-400"> ۱۲ </span>
                 </div>
 
-                <div class="cp-row-2  w-full text-right">
-                    <h1 class="text-white text-sm font-bold mb-3">توضیحات(اختیاری)</h1>
-                    <input type="text" class="w-full outline-none program-input  text-white border border-secondaryText/10 rounded-lg p-2 text-right bg-transparent">
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">ست</p>
+
+                  <span class="text-sm text-zinc-400"> ۴ </span>
+                </div>
+              </div>
+
+              <!-- Exercise Image -->
+              <div class="flex justify-start mb-5">
+                <img
+                  src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
+                  class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
+                />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div
+              class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse"
+            >
+              <span class="text-zinc-400"> ☷ </span>
+
+              <p class="text-xs text-zinc-400">
+                دمبل ها را تا موازی شدن با سینه پایین بیاورید
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4"
+          >
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-5">
+              <button class="text-red-500 text-2xl hover:text-red-400">
+                ×
+              </button>
+
+              <div class="flex items-center gap-3 flex-row-reverse text-right">
+                <div
+                  class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center"
+                >
+                  <span class="text-zinc-400 text-xl"> ⠿ </span>
                 </div>
 
+                <div>
+                  <h2 class="font-bold text-lg">پرس سینه دمبل</h2>
+
+                  <p class="text-xs text-zinc-400">سینه</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Stats -->
+            <div class="flex justify-between">
+              <div class="grid grid-cols-3 text-center mb-5 flex-1">
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">استراحت</p>
+
+                  <span class="text-sm text-zinc-400"> ۹۰ ثانیه </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">تکرار</p>
+
+                  <span class="text-sm text-zinc-400"> ۱۲ </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">ست</p>
+
+                  <span class="text-sm text-zinc-400"> ۴ </span>
+                </div>
+              </div>
+
+              <!-- Exercise Image -->
+              <div class="flex justify-start mb-5">
+                <img
+                  src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
+                  class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
+                />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div
+              class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse"
+            >
+              <span class="text-zinc-400"> ☷ </span>
+
+              <p class="text-xs text-zinc-400">
+                دمبل ها را تا موازی شدن با سینه پایین بیاورید
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4"
+          >
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-5">
+              <button class="text-red-500 text-2xl hover:text-red-400">
+                ×
+              </button>
+
+              <div class="flex items-center gap-3 flex-row-reverse text-right">
+                <div
+                  class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center"
+                >
+                  <span class="text-zinc-400 text-xl"> ⠿ </span>
+                </div>
+
+                <div>
+                  <h2 class="font-bold text-lg">پرس سینه دمبل</h2>
+
+                  <p class="text-xs text-zinc-400">سینه</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="flex justify-between">
+              <div class="grid grid-cols-3 text-center mb-5 flex-1">
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">استراحت</p>
+
+                  <span class="text-sm text-zinc-400"> ۹۰ ثانیه </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">تکرار</p>
+
+                  <span class="text-sm text-zinc-400"> ۱۲ </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">ست</p>
+
+                  <span class="text-sm text-zinc-400"> ۴ </span>
+                </div>
+              </div>
+
+              <!-- Exercise Image -->
+              <div class="flex justify-start mb-5">
+                <img
+                  src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
+                  class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
+                />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div
+              class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse"
+            >
+              <span class="text-zinc-400"> ☷ </span>
+
+              <p class="text-xs text-zinc-400">
+                دمبل ها را تا موازی شدن با سینه پایین بیاورید
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4"
+          >
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-5">
+              <button class="text-red-500 text-2xl hover:text-red-400">
+                ×
+              </button>
+
+              <div class="flex items-center gap-3 flex-row-reverse text-right">
+                <div
+                  class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center"
+                >
+                  <span class="text-zinc-400 text-xl"> ⠿ </span>
+                </div>
+
+                <div>
+                  <h2 class="font-bold text-lg">پرس سینه دمبل</h2>
+
+                  <p class="text-xs text-zinc-400">سینه</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="flex justify-between">
+              <div class="grid grid-cols-3 text-center mb-5 flex-1">
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">استراحت</p>
+
+                  <span class="text-sm text-zinc-400"> ۹۰ ثانیه </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">تکرار</p>
+
+                  <span class="text-sm text-zinc-400"> ۱۲ </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">ست</p>
+
+                  <span class="text-sm text-zinc-400"> ۴ </span>
+                </div>
+              </div>
+
+              <!-- Exercise Image -->
+              <div class="flex justify-start mb-5">
+                <img
+                  src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
+                  class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
+                />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div
+              class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse"
+            >
+              <span class="text-zinc-400"> ☷ </span>
+
+              <p class="text-xs text-zinc-400">
+                دمبل ها را تا موازی شدن با سینه پایین بیاورید
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white"
+          >
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-5">
+              <button class="text-red-500 text-2xl hover:text-red-400">
+                ×
+              </button>
+
+              <div class="flex items-center gap-3 flex-row-reverse text-right">
+                <div
+                  class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center"
+                >
+                  <span class="text-zinc-400 text-xl"> ⠿ </span>
+                </div>
+
+                <div>
+                  <h2 class="font-bold text-lg">پرس سینه دمبل</h2>
+
+                  <p class="text-xs text-zinc-400">سینه</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="flex justify-between">
+              <div class="grid grid-cols-3 text-center mb-5 flex-1">
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">استراحت</p>
+
+                  <span class="text-sm text-zinc-400"> ۹۰ ثانیه </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">تکرار</p>
+
+                  <span class="text-sm text-zinc-400"> ۱۲ </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-zinc-300 font-bold">ست</p>
+
+                  <span class="text-sm text-zinc-400"> ۴ </span>
+                </div>
+              </div>
+
+              <!-- Exercise Image -->
+              <div class="flex justify-start mb-5">
+                <img
+                  src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
+                  class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
+                />
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div
+              class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse"
+            >
+              <span class="text-zinc-400"> ☷ </span>
+
+              <p class="text-xs text-zinc-400">
+                دمبل ها را تا موازی شدن با سینه پایین بیاورید
+              </p>
+            </div>
+          </div>
         </section>
 
-
-
-
-        <section class="trains w-full my-5">
-
-            <div class="trains-row-1 flex w-full justify-between items-center flex-row-reverse mb-4">
-                <h1 class="text-white">لیست حرکات(5)</h1>
-                <a href="#" class="text-error">پاک کردن همه</a>
-            </div>
-
-            <div class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4">
-
-
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-5">
-
-        <button class="text-red-500 text-2xl hover:text-red-400">
-            ×
-        </button>
-
-
-        <div class="flex items-center gap-3 flex-row-reverse text-right">
-
-            <div class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center">
-                <span class="text-zinc-400 text-xl">
-                    ⠿
-                </span>
-            </div>
-
-
-            <div>
-                <h2 class="font-bold text-lg">
-                    پرس سینه دمبل
-                </h2>
-
-                <p class="text-xs text-zinc-400">
-                    سینه
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- Stats -->
-    <div class="flex justify-between">
-    <div class="grid grid-cols-3 text-center mb-5 flex-1">
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                استراحت
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۹۰ ثانیه
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                تکرار
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۱۲
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                ست
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۴
-            </span>
-        </div>
-
-
-    </div>
-
-
-
-    <!-- Exercise Image -->
-    <div class="flex justify-start mb-5">
-
-        <img
-        src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
-        class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
-        >
-
-    </div>
-
-    </div>
-
-
-
-    <!-- Description -->
-    <div class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse">
-
-        <span class="text-zinc-400">
-            ☷
-        </span>
-
-
-        <p class="text-xs text-zinc-400">
-            دمبل ها را تا موازی شدن با سینه پایین بیاورید
-        </p>
-
-
-    </div>
-
-
-            </div>
-
-            <div class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4">
-
-
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-5">
-
-        <button class="text-red-500 text-2xl hover:text-red-400">
-            ×
-        </button>
-
-
-        <div class="flex items-center gap-3 flex-row-reverse text-right">
-
-            <div class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center">
-                <span class="text-zinc-400 text-xl">
-                    ⠿
-                </span>
-            </div>
-
-
-            <div>
-                <h2 class="font-bold text-lg">
-                    پرس سینه دمبل
-                </h2>
-
-                <p class="text-xs text-zinc-400">
-                    سینه
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- Stats -->
-    <div class="flex justify-between">
-    <div class="grid grid-cols-3 text-center mb-5 flex-1">
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                استراحت
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۹۰ ثانیه
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                تکرار
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۱۲
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                ست
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۴
-            </span>
-        </div>
-
-
-    </div>
-
-
-
-    <!-- Exercise Image -->
-    <div class="flex justify-start mb-5">
-
-        <img
-        src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
-        class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
-        >
-
-    </div>
-
-    </div>
-
-
-
-    <!-- Description -->
-    <div class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse">
-
-        <span class="text-zinc-400">
-            ☷
-        </span>
-
-
-        <p class="text-xs text-zinc-400">
-            دمبل ها را تا موازی شدن با سینه پایین بیاورید
-        </p>
-
-
-    </div>
-
-
-            </div>
-
-
-            <div class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4">
-
-
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-5">
-
-        <button class="text-red-500 text-2xl hover:text-red-400">
-            ×
-        </button>
-
-
-        <div class="flex items-center gap-3 flex-row-reverse text-right">
-
-            <div class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center">
-                <span class="text-zinc-400 text-xl">
-                    ⠿
-                </span>
-            </div>
-
-
-            <div>
-                <h2 class="font-bold text-lg">
-                    پرس سینه دمبل
-                </h2>
-
-                <p class="text-xs text-zinc-400">
-                    سینه
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- Stats -->
-    <div class="flex justify-between">
-    <div class="grid grid-cols-3 text-center mb-5 flex-1">
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                استراحت
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۹۰ ثانیه
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                تکرار
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۱۲
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                ست
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۴
-            </span>
-        </div>
-
-
-    </div>
-
-
-
-    <!-- Exercise Image -->
-    <div class="flex justify-start mb-5">
-
-        <img
-        src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
-        class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
-        >
-
-    </div>
-
-    </div>
-
-
-
-    <!-- Description -->
-    <div class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse">
-
-        <span class="text-zinc-400">
-            ☷
-        </span>
-
-
-        <p class="text-xs text-zinc-400">
-            دمبل ها را تا موازی شدن با سینه پایین بیاورید
-        </p>
-
-
-    </div>
-
-
-            </div>
-
-
-            <div class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white mb-4">
-
-
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-5">
-
-        <button class="text-red-500 text-2xl hover:text-red-400">
-            ×
-        </button>
-
-
-        <div class="flex items-center gap-3 flex-row-reverse text-right">
-
-            <div class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center">
-                <span class="text-zinc-400 text-xl">
-                    ⠿
-                </span>
-            </div>
-
-
-            <div>
-                <h2 class="font-bold text-lg">
-                    پرس سینه دمبل
-                </h2>
-
-                <p class="text-xs text-zinc-400">
-                    سینه
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- Stats -->
-    <div class="flex justify-between">
-    <div class="grid grid-cols-3 text-center mb-5 flex-1">
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                استراحت
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۹۰ ثانیه
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                تکرار
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۱۲
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                ست
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۴
-            </span>
-        </div>
-
-
-    </div>
-
-
-
-    <!-- Exercise Image -->
-    <div class="flex justify-start mb-5">
-
-        <img
-        src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
-        class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
-        >
-
-    </div>
-
-    </div>
-
-
-
-    <!-- Description -->
-    <div class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse">
-
-        <span class="text-zinc-400">
-            ☷
-        </span>
-
-
-        <p class="text-xs text-zinc-400">
-            دمبل ها را تا موازی شدن با سینه پایین بیاورید
-        </p>
-
-
-    </div>
-
-
-            </div>
-
-
-            <div class="w-full max-w-md bg-surface border border-zinc-700 rounded-3xl p-5 text-white">
-
-
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-5">
-
-        <button class="text-red-500 text-2xl hover:text-red-400">
-            ×
-        </button>
-
-
-        <div class="flex items-center gap-3 flex-row-reverse text-right">
-
-            <div class="w-10 h-10 rounded-xl bg-zinc-900 flex items-center justify-center">
-                <span class="text-zinc-400 text-xl">
-                    ⠿
-                </span>
-            </div>
-
-
-            <div>
-                <h2 class="font-bold text-lg">
-                    پرس سینه دمبل
-                </h2>
-
-                <p class="text-xs text-zinc-400">
-                    سینه
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- Stats -->
-    <div class="flex justify-between">
-    <div class="grid grid-cols-3 text-center mb-5 flex-1">
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                استراحت
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۹۰ ثانیه
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                تکرار
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۱۲
-            </span>
-        </div>
-
-
-        <div>
-            <p class="text-sm text-zinc-300 font-bold">
-                ست
-            </p>
-
-            <span class="text-sm text-zinc-400">
-                ۴
-            </span>
-        </div>
-
-
-    </div>
-
-
-
-    <!-- Exercise Image -->
-    <div class="flex justify-start mb-5">
-
-        <img
-        src="assets/image/logan-weaver-lgnwvr-GOConXkcDkU-unsplash.jpg"
-        class="w-16 h-16 rounded-xl object-cover border border-zinc-600"
-        >
-
-    </div>
-
-    </div>
-
-
-
-    <!-- Description -->
-    <div class="bg-black rounded-xl px-4 py-2 flex items-center gap-3 flex-row-reverse">
-
-        <span class="text-zinc-400">
-            ☷
-        </span>
-
-
-        <p class="text-xs text-zinc-400">
-            دمبل ها را تا موازی شدن با سینه پایین بیاورید
-        </p>
-
-
-    </div>
-
-
-            </div>
-
-
+        <!-- create-new-train -->
+        <section  class="w-full">
+          <div
+            class="create-new-train-container w-full h-full py-5 rounded-xl bg-white/40 flex justify-center items-center flex-row-reverse gap-2"
+          >
+            <a href="#" class="pb-1">افزودن حرکت جدید</a>
+            <i class="fa fa-plus"></i>
+          </div>
         </section>
 
-
-        <section class="create-new-train w-full ">
-            <div class="create-new-train-container w-full h-full py-5 rounded-xl bg-white/40 flex  justify-center items-center flex-row-reverse gap-2">
-
-                <a href="#" class="pb-1">افزودن حرکت جدید</a>
-                <i class="fa fa-plus"></i>
-
-            </div>
-        </section>
-
-
-
-        </div>
+      </div>
     </main>
 
-    <nav class="fixed bottom-0 left-0 w-full bg-[#17181b] px-6 py-6">
-  <div class="flex items-center justify-between gap-4 max-w-md mx-auto">
-
-    <!-- دکمه پیش نمایش -->
-    <button
-      class="flex-1 h-10 rounded-xl border border-[#3a3b40] text-white text-sm font-semibold hover:bg-[#222328] transition"
+    <!-- bottom navbar -->
+    <nav
+      class="fixed bottom-0 left-0 w-full bg-[#17181b] px-6 py-6"
     >
-      پیش‌نمایش
-    </button>
+      <div class="flex items-center justify-between gap-4 max-w-md mx-auto">
+        <!-- دکمه پیش نمایش -->
+        <button
+          class="flex-1 h-10 rounded-xl border border-[#3a3b40] text-white text-sm font-semibold hover:bg-[#222328] transition"
+        >
+          پیش‌نمایش
+        </button>
 
-    <!-- دکمه انتشار -->
-    <button
-      class="flex-1 h-10 rounded-xl bg-white text-black text-sm font-semibold hover:bg-gray-100 transition"
-    >
-      انتشار برای ورزشکار
-    </button>
-
-  </div>
-</nav>
+        <!-- دکمه انتشار -->
+        <button
+          class="flex-1 h-10 rounded-xl bg-white text-black text-sm font-semibold hover:bg-gray-100 transition"
+        >
+          انتشار برای ورزشکار
+        </button>
+      </div>
+    </nav>
 
     <script src="assets/js/programBuilder.js"></script>
-</body>
+  </body>
 </html>
