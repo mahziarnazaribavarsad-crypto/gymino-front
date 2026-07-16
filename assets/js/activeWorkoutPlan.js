@@ -25,16 +25,16 @@
 // whater glass start
 
     const plusBtn = document.getElementById('plus-btn')
-    let whaterNumber = document.getElementById('whater-number')
+    let waterNumber = document.getElementById('water-number')
     const minusBtn = document.getElementById('minus-btn')
 // Converting the string "whatever number" to a number
-    let currentNumber = parseInt(whaterNumber.textContent)
+    let currentNumber = parseInt(waterNumber.textContent)
 //
 
 // The process of adding a number
     plusBtn.addEventListener('click' , () =>{
 
-        currentNumber =  parseInt(whaterNumber.textContent = ++currentNumber)
+        currentNumber =  parseInt(waterNumber.textContent = ++currentNumber)
 
     })
 //
@@ -43,10 +43,10 @@
 
         if(currentNumber > 0) {
 
-            currentNumber =  parseInt(whaterNumber.textContent = --currentNumber)
+            currentNumber =  parseInt(waterNumber.textContent = --currentNumber)
 
         }
 
     })
 //
-// whater glass end
+// water glass end
